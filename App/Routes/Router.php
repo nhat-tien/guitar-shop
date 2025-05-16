@@ -1,15 +1,30 @@
 <?php
 class Router {
+
     private $routes = [];
 
-    public function addRoute($route, $controller, $action) {
-        $this->routes[$route] = ['controller' => $controller, 'action' => $action];
+    public function get($route, $controller, $action) {
+        $this->routes["GET_" . $route] = ['controller' => $controller, 'action' => $action];
     }
 
-    public function dispatch($uri) {
-        if (array_key_exists($uri, $this->routes)) {
-            $controller = $this->routes[$uri]['controller'];
-            $action = $this->routes[$uri]['action'];
+    public function post($route, $controller, $action) {
+        $this->routes["POST_" . $route] = ['controller' => $controller, 'action' => $action];
+    }
+
+    public function dispath($route, $controller, $action) {
+        $this->routes["DISPATCH_" . $route] = ['controller' => $controller, 'action' => $action];
+    }
+
+    public function delete($route, $controller, $action) {
+        $this->routes["DELETE_" . $route] = ['controller' => $controller, 'action' => $action];
+    }
+
+
+    public function dispatch($uri,$method) {
+        $key = $method . "_" . $uri;
+        if (array_key_exists($key, $this->routes)) {
+            $controller = $this->routes[$key]['controller'];
+            $action = $this->routes[$key]['action'];
 
             $controller = new $controller();
             $controller->$action();

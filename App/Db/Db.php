@@ -9,14 +9,14 @@ class Db {
 
     public function __construct()
     {
-        require "env.php";
+        require "App/Config/env.php";
         try {
         $this->conn = new PDO("mysql:host={$env["server"]};dbname={$env["database"]}", $env["user"], $env["password"]);
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->statement = "";
         $this->params = [];
         $this->className = "";
-        echo "Connected successfully";
+        //echo "Connected successfully";
         } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
         }
@@ -62,6 +62,8 @@ class Db {
 
         $stmt = $this->conn->prepare($this->statement);
         $stmt->execute($this->params);
+
+        return $this;
     }
     
     public function close()

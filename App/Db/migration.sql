@@ -40,23 +40,23 @@ CREATE TABLE product_images (
 );
 
 CREATE TABLE users (
-  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name varchar(255),
-  email varchar(255) UNIQUE,
+  user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_name varchar(255),
+  user_email varchar(255) UNIQUE,
   password varchar(255),
-  role varchar(100)
+  user_role varchar(100)
 );
 
 CREATE TABLE customers (
-  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name varchar(255),
-  email varchar(255) UNIQUE,
+  customer_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  customer_name varchar(255),
+  customer_email varchar(255) UNIQUE,
   address varchar(255),
   password varchar(255)
 );
 
 CREATE TABLE orders (
-  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  order_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
   customer_id varchar(255),
   address varchar(255),
   created_at datetime DEFAULT CURRENT_TIMESTAMP,
@@ -73,5 +73,5 @@ CREATE TABLE order_detail (
   price int,
   created_at datetime DEFAULT CURRENT_TIMESTAMP,
   updated_at datetime DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (order_id) REFERENCES orders(id)
+  FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
