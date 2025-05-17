@@ -27,6 +27,11 @@ CREATE TABLE products (
    brand_id int,
    category_id int,
    body_shape_id int,
+   description varchar(500),
+   body_material varchar(255),
+   fretboard_material varchar(255),
+   scale_length varchar(255),
+   no_of_fret int,
   FOREIGN KEY (brand_id) REFERENCES brands(brand_id),
   FOREIGN KEY (category_id) REFERENCES categories(category_id),
   FOREIGN KEY (body_shape_id) REFERENCES body_shape(body_shape_id)

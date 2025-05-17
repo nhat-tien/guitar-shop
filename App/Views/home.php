@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Wee Lee Web</title>
-        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="/public/css/style.css">
     </head>
     <body>
         <div id="main">
@@ -22,7 +22,7 @@
                     </ul>
                 </div>
                 <div class="logo-container">
-                    <img src="public/img/SWEELEE logo.png" alt="Logo">
+                    <img src="/public/img/SWEELEE logo.png" alt="Logo">
                 </div>
                 <div class="user-actions">
                     <a href="">Đăng nhập</a>
@@ -39,11 +39,11 @@
             <main class="main-content">
 
                 <div class="main-banner">
-                    <img src="public/img/Cat.jpg" alt="Cat">
+                    <img src="/public/img/Cat.jpg" alt="Cat">
                 </div>
                 <div class="sub-banners">
-                    <img src="public/img/Cat.jpg" alt="">
-                    <img src="public/img/Cat.jpg" alt="">
+                    <img src="/public/img/Cat.jpg" alt="">
+                    <img src="/public/img/Cat.jpg" alt="">
                 </div>
                 <div class="service-info">
                    <div class="service-card">
@@ -77,7 +77,7 @@
                     <div class="best-sellers-list">
                         <!-- Guitar1 -->
                         <div class="product-card">
-                            <img src="public/img/Bán chạy/guitar1.webp" alt="" class="product-card-image">
+                            <img src="/public/img/Bán chạy/guitar1.webp" alt="" class="product-card-image">
                             <div class="product-card-info">  
                                 <div>
                                     <h5 class="product-card-name">
@@ -112,7 +112,7 @@
 
                         <!-- Guitar2 -->
                         <div class="product-card">
-                            <img src="public/img/Bán chạy/guitar2.webp" alt="" class="product-card-image">
+                            <img src="/public/img/Bán chạy/guitar2.webp" alt="" class="product-card-image">
                             <div class="product-card-info">  
                                 <div>
                                     <h5 class="product-card-name">
@@ -147,7 +147,7 @@
                         
                         <!-- Guitar3 -->
                         <div class="product-card">
-                            <img src="public/img/Bán chạy/guitar3.webp" alt="" class="product-card-image">
+                            <img src="/public/img/Bán chạy/guitar3.webp" alt="" class="product-card-image">
                             <div class="product-card-info">  
                                 <div>
                                     <h5 class="product-card-name">
@@ -182,7 +182,7 @@
 
                         <!-- Guitar4 -->
                         <div class="product-card">
-                            <img src="public/img/Bán chạy/guitar4.webp" alt="" class="product-card-image">
+                            <img src="/public/img/Bán chạy/guitar4.webp" alt="" class="product-card-image">
                             <div class="product-card-info">  
                                 <div>
                                     <h5 class="product-card-name">
