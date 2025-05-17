@@ -210,6 +210,7 @@
     
                                     <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-star-empty" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12.21h2.82l8.55.063 2.88-8.455L16.12 1l.87 2.881 2.64 8.518 11.37.25-9.27 6.89 2.46 8.58.84 2.881-2.28-1.785-6.93-5.26-6.96 5.072-2.34 1.66.87-2.819 2.7-8.455-6.81-5.449L1 12.211Zm5.67 2.005 5.04 4.04.6.438-.24.658-1.98 6.357 5.28-3.852.51-.345 5.7 4.322-2.01-7.015.54-.438 5.22-3.914-6.45-.126-.66-.062-.24-.658-1.92-6.294-2.1 6.231-.24.658H6.67Z" fill="#231E18"></path></svg>
 
+                                    <input type="text">
                                 </div>
                             </div>                  
                         </div>
