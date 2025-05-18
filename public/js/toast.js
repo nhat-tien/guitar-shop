@@ -1,9 +1,12 @@
-function show() {
-  var x = document.getElementById("snackbar");
+function showToast(message, type = 'success') {
+  const toast = document.createElement('div');
+  toast.className = `toast ${type}`;
+  toast.textContent = message;
 
-  x.className = "show";
+  const container = document.getElementById('toast-container');
+  container.appendChild(toast);
 
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  setTimeout(() => {
+    toast.remove();
+  }, 4000); 
 }
-
-show();

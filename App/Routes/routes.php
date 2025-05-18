@@ -5,6 +5,7 @@ require_once "App/Controllers/HomeController.php";
 require_once "App/Controllers/AuthController.php";
 require_once "App/Controllers/ProductController.php";
 require_once "App/Controllers/AdminController.php";
+require_once "App/Controllers/BrandController.php";
 
 $router = new Router();
 
@@ -32,3 +33,12 @@ $router->get("/admin/products/{}/show", ProductController::class, "show");
 $router->get("/admin/products/{}/edit", ProductController::class, "edit");
 $router->patch("/admin/products/{}/update", ProductController::class, "update");
 $router->delete("/admin/products/{}/delete", ProductController::class, "destroy");
+
+/* -----------------
+*  |   Brand 
+*  -----------------
+*/
+$router->get("/admin/brands", BrandController::class, "index");
+$router->post("/admin/brands", BrandController::class, "store");
+$router->patch("/admin/brands/{}", BrandController::class, "update");
+$router->delete("/admin/brands/{}", BrandController::class, "destroy");
