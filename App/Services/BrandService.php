@@ -43,4 +43,20 @@ class BrandService {
             "status" => true
         ];
     }
+
+    public function update($brand)
+    {
+        Db::builder()
+        ->statement("UPDATE brands SET brand_name = :brand_name WHERE brand_id = :brand_id")
+        ->params([
+            "brand_id" => $brand->brand_id,
+            "brand_name" => $brand->brand_name
+        ])
+        ->execute()
+        ->close();
+
+        return [
+            "status" => true
+        ];
+    }
 }
