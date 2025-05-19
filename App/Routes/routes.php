@@ -6,9 +6,10 @@ require_once "App/Controllers/AuthController.php";
 require_once "App/Controllers/ProductController.php";
 require_once "App/Controllers/AdminController.php";
 require_once "App/Controllers/BrandController.php";
+require_once "App/Controllers/BodyShapeController.php";
+require_once "App/Controllers/CategoryController.php";
 
 $router = new Router();
-
 
 /* -----------------
 *  |   Authentication 
@@ -40,5 +41,23 @@ $router->delete("/admin/products/{}/delete", ProductController::class, "destroy"
 */
 $router->get("/admin/brands", BrandController::class, "index");
 $router->post("/admin/brands", BrandController::class, "store");
-$router->patch("/admin/brands/{}", BrandController::class, "update");
+$router->post("/admin/brands/{}", BrandController::class, "update");
 $router->delete("/admin/brands/{}", BrandController::class, "destroy");
+
+/* -----------------
+*  |   Body Shape 
+*  -----------------
+*/
+$router->get("/admin/body-shapes", BodyShapeController::class, "index");
+$router->post("/admin/body-shapes", BodyShapeController::class, "store");
+$router->post("/admin/body-shapes/{}", BodyShapeController::class, "update");
+$router->delete("/admin/body-shapes/{}", BodyShapeController::class, "destroy");
+
+/* -----------------
+*  |   Category 
+*  -----------------
+*/
+$router->get("/admin/categories", CategoryController::class, "index");
+$router->post("/admin/categories", CategoryController::class, "store");
+$router->post("/admin/categories/{}", CategoryController::class, "update");
+$router->delete("/admin/categories/{}", CategoryController::class, "destroy");

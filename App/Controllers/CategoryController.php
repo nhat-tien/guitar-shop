@@ -1,23 +1,23 @@
 <?php
 require_once "Controller.php";
-require_once "App/Services/BrandService.php";
-require_once "App/Models/Brand.php";
+require_once "App/Services/CategoryService.php";
+require_once "App/Models/Category.php";
 
-class BrandController extends Controller {
+class CategoryController extends Controller {
 
-    private $brandsService;
+    private $categoryService;
 
     public function __construct()
     {
-       $this->brandsService = new BrandService();
+       $this->categoryService = new CategoryService();
     }
 
     public function index()
     {
         session_start();
 
-        $brands = $this->brandsService->getAll();
-        $this->view("admin.brand.index", ["brands" => $brands]);
+        $categories = $this->categoryService->getAll();
+        $this->view("admin.category.index", ["categorys" => $categories]);
     }
 
     public function create()
@@ -28,13 +28,13 @@ class BrandController extends Controller {
     public function store()
     {
         session_start();
-        $name = $_POST["brand_name"];
-        $res = $this->brandsService->insert($name);
+        $name = $_POST["category_name"];
+        $res = $this->categoryService->insert($name);
         $_SESSION['response'] = [ 
             "status" => $res['status'],
             "message" => $res['status'] ? "Thêm thành công": "Thêm thất bại",
         ];
-        header("location: /admin/brands");
+        header("location: /admin/categories");
     }
 
     public function show($id)
@@ -51,23 +51,23 @@ class BrandController extends Controller {
     public function update($id)
     {
         session_start();
-        $name = $_POST['brand_name'];
-        $brand = new Brand();
-        $brand->brand_name = $name;
-        $brand->brand_id = $id;
-        $res = $this->brandsService->update($brand);
+        $name = $_POST['category_name'];
+        $category = new Category();
+        $category->category_name = $name;
+        $category->category_id = $id;
+        $res = $this->categoryService->update($category);
         $_SESSION['response'] = [ 
             "status" => $res['status'],
             "message" => $res['status'] ? "Cập nhật thành công": "Cập nhật thất bại",
         ];
-        header("location: /admin/brands");
+        header("location: /admin/categories");
     }
 
 
     public function destroy($id)
     {
         session_start();
-        $res = $this->brandsService->delete($id);
+        $res = $this->categoryService->delete($id);
         $_SESSION['response'] = [ 
             "status" => $res['status'],
             "message" => $res['status'] ? "Xóa thành công": "Xóa thất bại",
