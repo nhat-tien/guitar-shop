@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Wee Lee Web</title>
-        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="/public/css/style.css">
     </head>
     <body>
         <div id="main">
@@ -18,7 +18,7 @@
                     </ul>
                 </div>
                 <div class="logo-container">
-                    <img src="public/img/SWEELEE logo.png" alt="Logo">
+                    <img src="/public/img/SWEELEE logo.png" alt="Logo">
                 </div>
 
                 <div class="user-actions">
@@ -38,11 +38,11 @@
                 </div>
                 
                 <div class="main-banner">
-                    <img src="public/img/Cat.jpg" alt="Cat">
+                    <img src="/public/img/Cat.jpg" alt="Cat">
                 </div>
                 <div class="sub-banners">
-                    <img src="public/img/Cat.jpg" alt="">
-                    <img src="public/img/Cat.jpg" alt="">
+                    <img src="/public/img/Cat.jpg" alt="">
+                    <img src="/public/img/Cat.jpg" alt="">
                 </div>
                 <div class="service-info">
                    <div class="service-card">
@@ -80,7 +80,44 @@
                     <div class="product-container">
                         <!-- Guitar1 -->
                         <div class="product-card">
-                            <img src="public/img/Bán chạy/guitar1.webp" alt="" class="product-card-image">
+                            <img src="/public/img/Bán chạy/guitar1.webp" alt="" class="product-card-image">
+                            <div class="product-card-info">  
+                                <div>
+                                    <h5 class="product-card-name">
+                                        <a href="#">Fender 70th Anniversary Player Stratocaster Electric Guitar, RW FB, Nebula Noir</a>
+                                    </h5>
+                                </div>    
+                                <div>
+                                    <div>
+                                        <strong class="product-card-price">29.040.000₫</strong>
+                                    </div>
+                                <div>
+                                    <div>
+                                        <span class="product-card-status">Có Hàng</span>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>
+
+                        <div class="product-card-rating__rating-container">
+    
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-star-empty" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12.21h2.82l8.55.063 2.88-8.455L16.12 1l.87 2.881 2.64 8.518 11.37.25-9.27 6.89 2.46 8.58.84 2.881-2.28-1.785-6.93-5.26-6.96 5.072-2.34 1.66.87-2.819 2.7-8.455-6.81-5.449L1 12.211Zm5.67 2.005 5.04 4.04.6.438-.24.658-1.98 6.357 5.28-3.852.51-.345 5.7 4.322-2.01-7.015.54-.438 5.22-3.914-6.45-.126-.66-.062-.24-.658-1.92-6.294-2.1 6.231-.24.658H6.67Z" fill="#231E18"></path></svg>
+    
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-star-empty" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12.21h2.82l8.55.063 2.88-8.455L16.12 1l.87 2.881 2.64 8.518 11.37.25-9.27 6.89 2.46 8.58.84 2.881-2.28-1.785-6.93-5.26-6.96 5.072-2.34 1.66.87-2.819 2.7-8.455-6.81-5.449L1 12.211Zm5.67 2.005 5.04 4.04.6.438-.24.658-1.98 6.357 5.28-3.852.51-.345 5.7 4.322-2.01-7.015.54-.438 5.22-3.914-6.45-.126-.66-.062-.24-.658-1.92-6.294-2.1 6.231-.24.658H6.67Z" fill="#231E18"></path></svg>
+    
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-star-empty" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12.21h2.82l8.55.063 2.88-8.455L16.12 1l.87 2.881 2.64 8.518 11.37.25-9.27 6.89 2.46 8.58.84 2.881-2.28-1.785-6.93-5.26-6.96 5.072-2.34 1.66.87-2.819 2.7-8.455-6.81-5.449L1 12.211Zm5.67 2.005 5.04 4.04.6.438-.24.658-1.98 6.357 5.28-3.852.51-.345 5.7 4.322-2.01-7.015.54-.438 5.22-3.914-6.45-.126-.66-.062-.24-.658-1.92-6.294-2.1 6.231-.24.658H6.67Z" fill="#231E18"></path></svg>
+    
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-star-empty" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12.21h2.82l8.55.063 2.88-8.455L16.12 1l.87 2.881 2.64 8.518 11.37.25-9.27 6.89 2.46 8.58.84 2.881-2.28-1.785-6.93-5.26-6.96 5.072-2.34 1.66.87-2.819 2.7-8.455-6.81-5.449L1 12.211Zm5.67 2.005 5.04 4.04.6.438-.24.658-1.98 6.357 5.28-3.852.51-.345 5.7 4.322-2.01-7.015.54-.438 5.22-3.914-6.45-.126-.66-.062-.24-.658-1.92-6.294-2.1 6.231-.24.658H6.67Z" fill="#231E18"></path></svg>
+    
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-star-empty" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12.21h2.82l8.55.063 2.88-8.455L16.12 1l.87 2.881 2.64 8.518 11.37.25-9.27 6.89 2.46 8.58.84 2.881-2.28-1.785-6.93-5.26-6.96 5.072-2.34 1.66.87-2.819 2.7-8.455-6.81-5.449L1 12.211Zm5.67 2.005 5.04 4.04.6.438-.24.658-1.98 6.357 5.28-3.852.51-.345 5.7 4.322-2.01-7.015.54-.438 5.22-3.914-6.45-.126-.66-.062-.24-.658-1.92-6.294-2.1 6.231-.24.658H6.67Z" fill="#231E18"></path></svg>
+
+                                </div>
+
+                        <!-- Guitar2 -->
+                        <div class="product-card">
+                            <img src="/public/img/Bán chạy/guitar2.webp" alt="" class="product-card-image">
+                            <div class="product-card-info">  
+                                <div>
                                     <h5 class="product-card-name">
                                         <a href="#">Heritage Ascent Collection H-137 P90 Electric Guitar, Vintage Cherry</a>
                                     </h5>
@@ -134,7 +171,9 @@
                         </div>
                         <!-- Guitar3 -->
                         <div class="product-card">
-                            <img src="public/img/Bán chạy/guitar3.webp" alt="" class="product-card-image">
+                            <img src="/public/img/Bán chạy/guitar3.webp" alt="" class="product-card-image">
+                            <div class="product-card-info">  
+                                <div>
                                     <h5 class="product-card-name">
                                         <a href="#">Ibanez Gio GRG131DX-BKF Electric Guitar, Black Flat</a>
                                     </h5>
@@ -161,7 +200,9 @@
                         </div>
                         <!-- Guitar4 -->
                         <div class="product-card">
-                            <img src="public/img/Bán chạy/guitar4.webp" alt="" class="product-card-image"> 
+                            <img src="/public/img/Bán chạy/guitar4.webp" alt="" class="product-card-image">
+                            <div class="product-card-info">  
+                                <div>
                                     <h5 class="product-card-name">
                                         <a href="#">PRS SE Custom 24 Electric Guitar w/Bag, Charcoal Cherry Burst</a>
                                     </h5>

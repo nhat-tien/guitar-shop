@@ -1,44 +1,163 @@
-#snackbar {
-  visibility: hidden; /* Hidden by default. Visible on click */
-  min-width: 250px; /* Set a default minimum width */
-  margin-left: -125px; /* Divide value of min-width by 2 */
-  background-color: #333; /* Black background color */
-  color: #fff; /* White text color */
-  text-align: center; /* Centered text */
-  border-radius: 2px; /* Rounded borders */
-  padding: 16px; /* Padding */
-  position: fixed; /* Sit on top of the screen */
-  z-index: 1; /* Add a z-index if needed */
-  left: 50%; /* Center the snackbar */
-  bottom: 30px; /* 30px from the bottom */
+#toast-container {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
 }
 
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-#snackbar.show {
-  visibility: visible; /* Show the snackbar */
-  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-  However, delay the fade out process for 2.5 seconds */
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+.new-toast {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5em;
+	width: max-content;
+	align-items: center;
+	padding: 1em 1.6em;
+	margin-bottom: 0.5em;
+	border-radius: 10px;
+	background-color: #fff;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+	animation: fadeInOut 4s ease forwards;
 }
 
-/* Animations to fade the snackbar in and out */
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+
+
+.new-toast__icon.success {
+	width: 20px;
+	opacity: 0;
+	height: 20px;
+	border-radius: 10px;
+	background: #61d345;
+	position: relative;
+	transform: rotate(45deg);
+	animation: circleAnimation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+	animation-delay: 100ms;
 }
 
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+.new-toast__icon.success::after {
+	content: '';
+	box-sizing: border-box;
+	animation: checkmarkAnimation 0.2s ease-out forwards;
+	opacity: 0;
+	animation-delay: 200ms;
+	position: absolute;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	border-color: #fff;
+	bottom: 6px;
+	left: 6px;
+	height: 10px;
+	width: 6px;
 }
 
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+
+@keyframes checkmarkAnimation {
+	0% {
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
+
+	40% {
+		height: 0;
+		width: 6px;
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+		height: 10px;
+	}
 }
 
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+.new-toast__icon.error {
+	width: 20px;
+	opacity: 0;
+	height: 20px;
+	border-radius: 10px;
+	background: var(--primary, #ff4b4b);
+	position: relative;
+	transform: rotate(45deg);
+	animation: circleAnimation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+	animation-delay: 100ms;
+}
+
+.new-toast__icon.error::after,
+.new-toast__icon.error::before {
+	content: '';
+	animation: firstLineAnimation 0.15s ease-out forwards;
+	animation-delay: 150ms;
+	position: absolute;
+	border-radius: 3px;
+	opacity: 0;
+	background: var(--secondary, #fff);
+	bottom: 9px;
+	left: 4px;
+	height: 2px;
+	width: 12px;
+}
+
+.new-toast__icon.error:before {
+	animation: secondLineAnimation 0.15s ease-out forwards;
+	animation-delay: 180ms;
+	transform: rotate(90deg);
+}
+
+
+@keyframes circleAnimation {
+	from {
+		transform: scale(0) rotate(45deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: scale(1) rotate(45deg);
+		opacity: 1;
+	}
+}
+
+@keyframes firstLineAnimation {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes secondLineAnimation {
+	from {
+		transform: scale(0) rotate(90deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: scale(1) rotate(90deg);
+		opacity: 1;
+	}
+}
+
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	10%,
+	90% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
 }

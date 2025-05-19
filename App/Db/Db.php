@@ -11,15 +11,21 @@ class Db {
     {
         require "App/Config/env.php";
         try {
-        $this->conn = new PDO("mysql:host={$env["server"]};dbname={$env["database"]}", $env["user"], $env["password"]);
-        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $this->statement = "";
-        $this->params = [];
-        $this->className = "";
+            $this->conn = new PDO("mysql:host={$env["server"]};dbname={$env["database"]}", $env["user"], $env["password"]);
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->statement = "";
+            $this->params = [];
+            $this->className = "";
         //echo "Connected successfully";
         } catch(PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
+            echo "Connection failed: " . $e->getMessage();
         }
+    }
+
+    public static function builder() 
+    {
+        $db = new Db();
+        return $db;
     }
 
     public function className($clsName)
