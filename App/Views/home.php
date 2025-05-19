@@ -58,7 +58,7 @@
                        <button>Thanh toán đảm bảo <h2>Mua hàng trực tuyến dễ dàng, nhanh chóng</h2></button>
                     </div>
                     <div class="service-card">
-                        <img src="//www.sweelee.com.vn/cdn/shop/files/Returns_1.svg?crop=center&amp;height=24&amp;v=1707293457&amp;width=24" alt="" srcset="//www.sweelee.com.vn/cdn/shop/files/Returns_1.svg?crop=center&amp;height=24&amp;v=1707293457&amp;width=24 24w" width="24" height="24" loading="lazy">
+                        <img src="//www.sweelee.com.vn/cdn/shop/files/Returns_1.svg?crop=center&amp;height=32&amp;v=1707293457&amp;width=32" alt="" srcset="//www.sweelee.com.vn/cdn/shop/files/Returns_1.svg?crop=center&amp;height=32&amp;v=1707293457&amp;width=32 24w" width="32" height="32" loading="lazy">
                         <button>14 Ngày hoàn trả <h2>Tận hưởng chính sách linh hoạt khi đổi ý</h2></button>
                     </div>
                 </div>
@@ -69,6 +69,9 @@
                     <span>Xem mọi hạng mục</span>
                     <svg class="product-search-icon" aria-hidden="true" focusable="false" role="presentation" class="icon angle-right" width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.266 20.686 15.496 6.29a.83.83 0 0 1 1.258 0l12.98 14.126c.354.385.354.985 0 1.37l-1.52 1.655a.83.83 0 0 1-1.26 0l-10.83-11.786L5.046 23.711a.83.83 0 0 1-1.259 0l-1.52-1.655a1.016 1.016 0 0 1 0-1.37Z" fill="#231E18"></path></svg>
                 </div>
+
+
+
                 <!-- Bán chạy -->
                 <div class="best-sellers">
                     <h2 class="best-sellers-title">BÁN CHẠY</h2>
@@ -193,7 +196,7 @@
             </div>
             <!-- SPECIAL -->
             
-            <div class="special">
+                <div class="special">
                     <h2 class="special-title">SPECIAL</h2>
                     <div class="special-categories">
                         <h5 class="category__item">Hot Deals</h5>
@@ -313,9 +316,98 @@
 
                 </div>
             </div>
-
-
             </div>
+
+            <section class="feature-section">
+                <h2 class="section-title">Swee Lee Là Cửa Hàng Âm Nhạc Hàng Đầu Đông Nam Á</h2>
+                <div class="feature-grid">
+                    
+                    <!-- Box 1 -->
+                    <div class="feature-card" style="background-image: url('public/img/box/box1.jfif');">
+                    <div class="feature-content light-text">
+                        <h3>Mở Khoá Rewards Độc Quyền</h3>
+                        <p>Mua sắm và tích điểm để nhận đặc quyền cùng nhiều ưu đãi đặc biệt. Tạo ngay tài khoản và nhận miễn phí 100 điểm.</p>
+                        <a href="#">Tham Gia Ngay &gt;</a>
+                    </div>
+                    </div>
+
+                    <!-- Box 2 -->
+                    <div class="feature-card" style="background-image: url('public/img/box/box2.jfif');">
+                    <div class="feature-content light-text">
+                        <h3>Giao Nhận Nhanh & Miễn Phí</h3>
+                        <p>Giao free gear mới về tận cửa trong vài ngày.</p>
+                        <a href="#">Mua Ngay &gt;</a>
+                    </div>
+                    </div>
+
+                    <!-- Box 3 -->
+                    <div class="feature-card" style="background-image: url('public/img/box/box3.jfif');">
+                    <div class="feature-content">
+                        <h3>Mua Ngày, Trả Sau</h3>
+                        <p>Mua sắm thoải mái và thanh toán theo kỳ hạn với AlePay.</p>
+                        <a href="#">Mua Sắm Ngay &gt;</a>
+                    </div>
+                    </div>
+
+                    <!-- Box 4 -->
+                    <div class="feature-card" style="background-image: url('public/img/box/box4.jfif');">
+                    <div class="feature-content">
+                        <h3>14 Ngày Hoàn Hàng Dễ Dàng</h3>
+                        <p>Hoàn hàng và đổi sang store credit trong 14 ngày sau mua.</p>
+                        <a href="#">Đến Trung Tâm Trợ Giúp &gt;</a>
+                    </div>
+                    </div>
+
+                    <!-- Box 5 -->
+                    <div class="feature-card" style="background-image: url('public/img/box/box5.jfif');">
+                    <div class="feature-content light-text">
+                        <h3>Hỗ trợ theo yêu cầu</h3>
+                        <p>Chat với đội ngũ chuyên gia để được trợ giúp.</p>
+                        <a href="#">Bắt Đầu Chat &gt;</a>
+                    </div>
+                    </div>
+
+                </div>    
+            </section>
+            
+            <div class="info-section">
+                <div class="info-boxes">
+                    <div class="info-box">
+                    <div class="info-text">
+                        <h3>Tất Cả Đều Hội Tụ Ở Đây</h3>
+                        <p>Nhạc cụ. Âm nhạc. Phong cách</p>
+                        <button>Xem Vị Trí Cửa Hàng</button>
+                    </div>
+                        <img src="public/img/box/box6.jfif" alt="Shop" />
+                    </div>
+
+                    <div class="info-box">
+                    <div class="info-text">
+                        <h3>Cần Trợ Giúp?</h3>
+                        <p>Nhấp Chuột Để Được Trợ Giúp.</p>
+                        <button>Liên Hệ Chúng Tôi</button>
+                    </div>
+                        <img src="public/img/box/box7.jfif" alt="Support" />
+                    </div>
+                </div>
+
+                <div class="brand-section">
+                    <div class="brand-header">
+                    <h4>TÌM THEO THƯƠNG HIỆU</h4>
+                    <a href="#">Xem Theo Thương Hiệu A-Z</a>
+                    </div>
+                        <div class="brand-logos">
+                            <img src="public/img/brand/ibanez.png" alt="Ibanez">
+                            <img src="public/img/brand/prs.png" alt="PRS">
+                            <img src="public/img/brand/martin.png" alt="Martin">
+                            <img src="public/img/brand/marshall.png" alt="Marshall">
+                            <img src="public/img/brand/heritage.png" alt="Heritage">
+                            <img src="public/img/brand/fender.png" alt="Fender">
+                            <img src="public/img/brand/squier.png" alt="Squier">
+                        </div>
+                </div>
+            </div>
+
             </main>
 
         </div>
