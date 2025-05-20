@@ -8,6 +8,9 @@ require_once "App/Controllers/AdminController.php";
 require_once "App/Controllers/BrandController.php";
 require_once "App/Controllers/BodyShapeController.php";
 require_once "App/Controllers/CategoryController.php";
+require_once "App/Controllers/CustomerController.php";
+require_once "App/Controllers/UserController.php";
+require_once "App/Controllers/OrderController.php";
 
 $router = new Router();
 
@@ -23,6 +26,7 @@ $router->post("/admin/register", AuthController::class, "registerUser");
 *  -----------------
 */
 $router->get("/admin/dashboard", AdminController::class, "dashboard");
+
 /* -----------------
 *  |    Product
 *  -----------------
@@ -32,8 +36,8 @@ $router->get("/admin/products/create", ProductController::class, "create");
 $router->post("/admin/products", ProductController::class, "store");
 $router->get("/admin/products/{}/show", ProductController::class, "show");
 $router->get("/admin/products/{}/edit", ProductController::class, "edit");
-$router->patch("/admin/products/{}/update", ProductController::class, "update");
-$router->delete("/admin/products/{}/delete", ProductController::class, "destroy");
+$router->post("/admin/products/{}", ProductController::class, "update");
+$router->delete("/admin/products/{}", ProductController::class, "destroy");
 
 /* -----------------
 *  |   Brand 
@@ -61,3 +65,33 @@ $router->get("/admin/categories", CategoryController::class, "index");
 $router->post("/admin/categories", CategoryController::class, "store");
 $router->post("/admin/categories/{}", CategoryController::class, "update");
 $router->delete("/admin/categories/{}", CategoryController::class, "destroy");
+
+/* -----------------
+*  |    User 
+*  -----------------
+*/
+$router->get("/admin/users", UserController::class, "index");
+$router->get("/admin/users/create", UserController::class, "create");
+$router->post("/admin/users", UserController::class, "store");
+$router->get("/admin/users/{}/edit", UserController::class, "edit");
+$router->post("/admin/users/{}", UserController::class, "update");
+$router->delete("/admin/users/{}", UserController::class, "destroy");
+
+/* -----------------
+*  |   Customer 
+*  -----------------
+*/
+$router->get("/admin/customers", CustomerController::class, "index");
+$router->get("/admin/customers/{}/edit", CustomerController::class, "edit");
+$router->post("/admin/customers/{}", CustomerController::class, "update");
+$router->delete("/admin/customers/{}", CustomerController::class, "destroy");
+
+/* -----------------
+*  |   Order 
+*  -----------------
+*/
+$router->get("/admin/orders", OrderController::class, "index");
+$router->get("/admin/orders/{}/show", OrderController::class, "show");
+$router->get("/admin/orders/{}/edit", OrderController::class, "edit");
+$router->post("/admin/orders/{}", OrderController::class, "update");
+$router->delete("/admin/orders/{}", OrderController::class, "destroy");

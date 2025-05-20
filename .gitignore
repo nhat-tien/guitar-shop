@@ -1,1 +1,3 @@
 App/Config/env.php
+public/uploads/*
+!public/uploads/placeholder.txt

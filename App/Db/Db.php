@@ -71,10 +71,29 @@ class Db {
 
         return $this;
     }
+
+    public function lastId()
+    {
+        return $this->conn->lastInsertId();
+    }
     
     public function close()
     {
         $this->conn = null;
+    }
+
+    public function beginTransation() {
+        $this->conn->beginTransaction();
+    }
+
+    public function commit()
+    {
+        $this->conn->commit();
+    }
+
+    public function rollback()
+    {
+        $this->conn->rollBack();
     }
 
     public function __destruct()

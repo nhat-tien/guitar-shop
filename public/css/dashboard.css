@@ -8,10 +8,11 @@ main {
     display: flex;
     width: 30ch;
     flex-direction: column;
-    padding: 2em 1em;
+    padding: 0.5em 1em;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     z-index: 10;
     gap: 0.5em;
+    transition: all 0.3s linear;
 }
 
 .main-center {
@@ -23,6 +24,14 @@ main {
     overflow-y: scroll;
 }
 
+html.collapse .side-menu {
+    width: 8ch;
+}
+
+html.collapse  .side-menu-item__label {
+    display: none;
+}
+
 .side-menu-item {
     display: flex;
     flex-direction: row;
@@ -32,7 +41,7 @@ main {
     padding: 0.2em 0.4em;
     background-color: transparent;
     border-radius: 10px;
-    transition: all .2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .side-menu-item:hover {
@@ -54,11 +63,34 @@ main {
 
 .side-menu-item__icon {
     width: 2em;
-    margin-right: 1em;
+    height: 2em;
+}
+
+.side-menu-item__label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 1em;
 }
 
 .side-menu-item__icon svg {
     transition: all .2s ease-in-out;
+    stroke: #000;
+    height: 2em;
+    width: 2em;
+}
+
+.side-menu__toggle-btn {
+    width: max-content
+}
+
+.side-menu__toggle-btn:hover {
+    background-color: #f0efee;
+    box-shadow: none;
+    color: #000;
+}
+
+.side-menu__toggle-btn:hover svg {
     stroke: #000;
 }
 
@@ -142,10 +174,13 @@ td {
     left: 100%;
     gap: 0.2em;
     justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-list.show {
     display: flex;
+    opacity: 1;
 }
 
 .menu-list__item {
@@ -191,6 +226,7 @@ td {
     border: 1px solid #cacaca;
     border-radius: 5px;
     padding: 0.3em;
+    height: 2.1em;
 }
 
 .text-field__input:focus {
@@ -218,4 +254,122 @@ td {
     border-radius: 10px;
     width: 40%;
     padding: 0.7em;
+}
+
+.ck-powered-by {
+    display: none !important;
+}
+
+.editor-container {
+    margin: 1em 0;
+}
+
+.field {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.field__label {
+    font-size: 0.9rem;
+}
+
+.field__content {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.field__description {
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.show-slide {
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.admin-header {
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.admin-header .logo {
+    margin-left: 2em;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.admin-header .avatar {
+    margin-right: 2em;
+    background-color: #000;
+    color: #fff;
+    padding: 0.2em;
+    width: 3ch;
+    height: 3ch;
+    border-radius: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.password-field {
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    padding: 0.3em;
+    height: 2.1em;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.password-field__input {
+    width: 80%;
+}
+
+.password-field__icon {
+    width: 2em;
+    padding: 0.2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.password-field__icon--eye-open {
+    display: none;
+}
+
+.password-field.show .password-field__icon--eye-open {
+    display: block;
+}
+
+.password-field.close .password-field__icon--eye-open {
+    display: none;
+}
+
+.password-field.show .password-field__icon--eye-close {
+    display: none;
+}
+
+.password-field.close .password-field__icon--eye-close {
+    display: block;
+}
+
+.avatar-container {
+    position: relative;
+}
+
+.avatar-container .menu-list {
+    position: absolute;
+    top: 120%;
+    left: -150%;
+    z-index: 10;
 }

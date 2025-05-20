@@ -40,7 +40,9 @@ CREATE TABLE products (
 CREATE TABLE product_images (
    product_image_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
    product_id int,
+   product_image_name varchar(255),
    url varchar(255),
+   order_image int,
   FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
 
@@ -48,6 +50,7 @@ CREATE TABLE users (
   user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
   user_name varchar(255),
   user_email varchar(255) UNIQUE,
+  address varchar(255),
   password varchar(255),
   user_role varchar(100)
 );
@@ -66,14 +69,14 @@ CREATE TABLE orders (
   address varchar(255),
   created_at datetime DEFAULT CURRENT_TIMESTAMP,
   updated_at datetime DEFAULT CURRENT_TIMESTAMP,
-  total int
+  total int,
+  status varchar(255)
 );
 
 CREATE TABLE order_detail (
   id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
   order_id int,
-  customer_id varchar(255),
-  product_name varchar(255),
+  product_id int,
   product_quantity int,
   price int,
   created_at datetime DEFAULT CURRENT_TIMESTAMP,
