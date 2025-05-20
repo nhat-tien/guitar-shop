@@ -73,70 +73,225 @@ html, body {
 
 
 .main-content {
-    /* background-color:violet; */
+    background-color: #fff;
     display: block;
 }
 .search-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px;
-  background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #fafafa;
 }
 
 .search-box svg {
-  width: 20px;
-  height: 20px;
-  fill: #231E18;
+    width: 20px;
+    height: 20px;
+    fill: #231E18;
 }
 
 .search-box input {
-  width: 1100px;
-  height: 36px;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.3s;
+    width: 1100px;
+    height: 36px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
-.search-box input[type="text"]:focus {
-  border-color: #666;
+.search-box input:focus {
+    border-color: #666;
 }
 
 .search-box a {
-  color: #5a2ea0;
-  text-decoration: underline;
-  font-size: 14px;
+    color: #5a2ea0;
+    text-decoration: underline;
+    font-size: 14px;
 }
 
 .main-content .search-box input {
-  margin: 10px;
+    margin: 10px;
 }
+
+/*slide*/
+.swiper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-direction: row; /* Hiển thị ngang */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.swiper-wrapper .swiper-slide {
+    background-color: violet;
+    padding: 20px 0 ;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.slide-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;        /* Giới hạn chiều rộng */
+    width: 100%;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.ticket-left {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    background-color: #231e18;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 12px 0 0 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.promo-content {
+    max-width: 500px;
+    color: #231e18;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.main-text {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.highlight {
+    background-color: #fff;
+    padding: 0 5px;
+}
+
+.buy-now {
+    margin-top: 16px;
+    background-color: #231e18;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.promo-image img {
+    max-height: 280px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ccc;
+}
+
+.swiper-pagination-bullet {
+    background-color: #ccc;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #231e18;
+}
+/* collection */
+
+.sub-banners .product-box {
+    display: flex;
+}
+.product-banner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.product-box {
+  display: flex;
+  align-items: center;
+  background-color: #fdf7ed;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  transition: transform 0.3s;
+}
+
+.product-box:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 80px;
+  height: auto;
+  margin-right: 16px;
+}
+
+.product-text {
+  font-family: sans-serif;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle {
+  color: #a47d00;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.product-text h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
 
 
 /* Banner chính */
 .main-banner img {
-    /* width: 100%;
+    width: 100%;
     max-height: 400px;
-    object-fit: cover; */
-
-    background-color: #e04c2e;
-    border-radius: 12px;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    object-fit: cover;
 }
 
 /* Banner phụ */
 .sub-banners {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
 }
 

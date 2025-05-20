@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <title>Wee Lee Web</title>
         <link rel="stylesheet" href="/public/css/style.css">
-        <link rel="stylesheet" href="public/js/" />
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="public/js/swiper-bundle.min.css" />
+        <script src="public/js/swiper-bundle.min.js"></script>
     </head>
     <body>
         <div id="main">
@@ -16,7 +16,7 @@
                         <li><a href="">CÓ GÌ MỚI</a></li>
                         <li><a href="">DEALS</a></li>
                         <li><a href="">THƯƠNG HIỆU</a></li>
-                        <li><a hre  f="">SẢN PHẨM</a></li>
+                        <li><a href="">SẢN PHẨM</a></li>
                     </ul>
                 </div>
                 <div class="logo-container">
@@ -40,11 +40,83 @@
                 </div>
                 
                 <div class="main-banner">
-                    
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <div class="slide-wrapper">
+                                    <div class="ticket-left">TẶNG 400,000 ĐIỂM<br>CHO ĐƠN HÀNG TỐI THIỂU</div>
+                                        <div class="promo-content">
+                                            <p class="label">ƯU ĐÃI CÓ HẠN</p>
+                                            <h1 class="main-text">NHÂN ĐÔI ĐIỂM<br><span class="highlight">REWARDS</span><br>TOÀN HỆ THỐNG</h1>
+                                            <button class="buy-now">Mua Ngay</button>
+                                        </div>
+                                        <div class="promo-image">
+                                            <img src="public/img/Slider/guitar.png" alt="Promo Image" />
+                                        </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <div class="slide-wrapper">
+                                    <div class="ticket-left">FREESHIP<br>CHO HÓA ĐƠN > 500K</div>
+                                        <div class="promo-content">
+                                            <p class="label">ƯU ĐÃI MỚI</p>
+                                            <h1 class="main-text">VẬN CHUYỂN<br><span class="highlight">MIỄN PHÍ</span><br>TOÀN QUỐC</h1>
+                                            <button class="buy-now">Mua Ngay</button>
+                                        </div>
+                                        <div class="promo-image">
+                                            <img src="public/img/Slider/pedal.png" alt="Promo Image" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        <!-- Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
+                <script>
+                    const swiper = new Swiper(".mySwiper", {
+                        loop: true,
+                        pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                        },
+                        navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                        },
+                    });
+                </script>
+
                 <div class="sub-banners">
-                    <img src="/public/img/Cat.jpg" alt="">
-                    <img src="/public/img/Cat.jpg" alt="">
+                    <div class="product-banner">
+                        <a href="/gretsch" class="product-box">
+                            <img src="public/img/collection/1.png" alt="Gretsch Guitars" class="product-image">
+                            <div class="product-text">
+                            <h4 class="brand">GRETSCH</h4>
+                            <p class="subtitle">ÂM VANG HIẾM THẤY</p>
+                            <h3>Được Chế<br>Tác Độc Đáo</h3>
+                            </div>
+                        </a>
+                    
+                        <a href="/tama" class="product-box">
+                            <img src="public/img/collection/2.png" alt="Tama Pedal" class="product-image">
+                            <div class="product-text">
+                            <h4 class="brand">TAMA</h4>
+                            <p class="subtitle">KHÁM PHÁ 2025</p>
+                            <h3>Dành Cho Drummer,<br>Chuyên Để Biểu Diễn</h3>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <div class="service-info">
                    <div class="service-card">
