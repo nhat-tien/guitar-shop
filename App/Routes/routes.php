@@ -73,7 +73,6 @@ $router->delete("/admin/categories/{}", CategoryController::class, "destroy");
 $router->get("/admin/users", UserController::class, "index");
 $router->get("/admin/users/create", UserController::class, "create");
 $router->post("/admin/users", UserController::class, "store");
-$router->get("/admin/users/{}/show", UserController::class, "show");
 $router->get("/admin/users/{}/edit", UserController::class, "edit");
 $router->post("/admin/users/{}", UserController::class, "update");
 $router->delete("/admin/users/{}", UserController::class, "destroy");
@@ -83,7 +82,6 @@ $router->delete("/admin/users/{}", UserController::class, "destroy");
 *  -----------------
 */
 $router->get("/admin/customers", CustomerController::class, "index");
-$router->get("/admin/customers/{}/show", CustomerController::class, "show");
 $router->get("/admin/customers/{}/edit", CustomerController::class, "edit");
 $router->post("/admin/customers/{}", CustomerController::class, "update");
 $router->delete("/admin/customers/{}", CustomerController::class, "destroy");

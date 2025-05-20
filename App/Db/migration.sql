@@ -69,14 +69,14 @@ CREATE TABLE orders (
   address varchar(255),
   created_at datetime DEFAULT CURRENT_TIMESTAMP,
   updated_at datetime DEFAULT CURRENT_TIMESTAMP,
-  total int
+  total int,
+  status varchar(255)
 );
 
 CREATE TABLE order_detail (
   id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
   order_id int,
-  customer_id varchar(255),
-  product_name varchar(255),
+  product_id int,
   product_quantity int,
   price int,
   created_at datetime DEFAULT CURRENT_TIMESTAMP,

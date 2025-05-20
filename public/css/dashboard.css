@@ -24,8 +24,8 @@ main {
     overflow-y: scroll;
 }
 
-html.collapse .side-menu{
-    width: 10ch;
+html.collapse .side-menu {
+    width: 8ch;
 }
 
 html.collapse  .side-menu-item__label {
@@ -41,7 +41,7 @@ html.collapse  .side-menu-item__label {
     padding: 0.2em 0.4em;
     background-color: transparent;
     border-radius: 10px;
-    transition: all .2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .side-menu-item:hover {
@@ -63,18 +63,21 @@ html.collapse  .side-menu-item__label {
 
 .side-menu-item__icon {
     width: 2em;
-    margin-right: 1em;
+    height: 2em;
 }
 
 .side-menu-item__label {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-left: 1em;
 }
 
 .side-menu-item__icon svg {
     transition: all .2s ease-in-out;
     stroke: #000;
+    height: 2em;
+    width: 2em;
 }
 
 .side-menu__toggle-btn {
@@ -171,10 +174,13 @@ td {
     left: 100%;
     gap: 0.2em;
     justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-list.show {
     display: flex;
+    opacity: 1;
 }
 
 .menu-list__item {
@@ -355,4 +361,15 @@ td {
 
 .password-field.close .password-field__icon--eye-close {
     display: block;
+}
+
+.avatar-container {
+    position: relative;
+}
+
+.avatar-container .menu-list {
+    position: absolute;
+    top: 120%;
+    left: -150%;
+    z-index: 10;
 }
