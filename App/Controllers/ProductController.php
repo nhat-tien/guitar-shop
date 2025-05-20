@@ -243,13 +243,4 @@ class ProductController extends Controller {
         echo json_encode([]);
         exit();
     }
-
-    public function sendError($message)
-    {
-        echo json_encode([
-            "status" => false,
-            "message" => $message,
-        ]);
-        exit();
-    }
 }

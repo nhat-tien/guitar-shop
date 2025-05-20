@@ -16,6 +16,7 @@
 </head>
 
 <body>
+        <?php require "App/Views/components/admin/header.php" ?>
     <main>
         <?php require "App/Views/components/admin/sidemenu.php" ?>
         <div class="main-center">

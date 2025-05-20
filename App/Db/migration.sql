@@ -50,6 +50,7 @@ CREATE TABLE users (
   user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
   user_name varchar(255),
   user_email varchar(255) UNIQUE,
+  address varchar(255),
   password varchar(255),
   user_role varchar(100)
 );
