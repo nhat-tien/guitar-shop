@@ -56,13 +56,6 @@
                             <input name="quantity" type="number" class="text-field__input" />
                         </div>
                         <div class="text-field">
-                            <label class="text-field__label">Đơn vị giá</label>
-                            <select name="price_unit" class="text-field__input">
-                                <option value="VND">₫ VND</option>
-                                <option value="USD">$ USD</option>
-                            </select>
-                        </div>
-                        <div class="text-field">
                             <label class="text-field__label">Đơn vị khuyến mãi</label>
                             <select name="discount_unit" class="text-field__input">
                                 <option value="%">%</option>

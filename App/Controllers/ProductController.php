@@ -56,7 +56,6 @@ class ProductController extends Controller {
             $this->sendError("Thiếu giá");
         }
         $product->base_price = $_POST["base_price"];
-        $product->price_unit = $_POST["price_unit"];
         $product->discount = $_POST["discount"];
         $product->discount_unit = $_POST["discount_unit"];
         if(!isset($_POST["number_of_string"]) || empty($_POST["number_of_string"])) {
@@ -167,7 +166,6 @@ class ProductController extends Controller {
             $this->sendError("Thiếu giá");
         }
         $product->base_price = $_POST["base_price"];
-        $product->price_unit = $_POST["price_unit"];
         $product->discount = $_POST["discount"];
         $product->discount_unit = $_POST["discount_unit"];
         if(!isset($_POST["number_of_string"]) || empty($_POST["number_of_string"])) {
