@@ -32,7 +32,7 @@ $router->get("/admin/products/create", ProductController::class, "create");
 $router->post("/admin/products", ProductController::class, "store");
 $router->get("/admin/products/{}/show", ProductController::class, "show");
 $router->get("/admin/products/{}/edit", ProductController::class, "edit");
-$router->patch("/admin/products/{}", ProductController::class, "update");
+$router->post("/admin/products/{}", ProductController::class, "update");
 $router->delete("/admin/products/{}", ProductController::class, "destroy");
 
 /* -----------------

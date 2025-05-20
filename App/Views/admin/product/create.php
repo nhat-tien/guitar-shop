@@ -184,7 +184,10 @@
         }
     }
     </script>
-    <script type="module" src="/public/js/editor.js"></script>
+    <script type="module">
+        import { setupEditor } from "/public/js/editor.js"
+        setupEditor();
+    </script>
 </body>
 
 </html>

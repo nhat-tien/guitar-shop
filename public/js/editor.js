@@ -36,6 +36,8 @@ import {
 	Underline
 } from 'ckeditor5';
 
+
+export function setupEditor(initialData = "") {
 const LICENSE_KEY = 'GPL'; // or <YOUR_LICENSE_KEY>.
 
 const editorConfig = {
@@ -156,7 +158,7 @@ const editorConfig = {
 			}
 		]
 	},
-	initialData: '',
+	initialData: initialData,
 	licenseKey: LICENSE_KEY,
 	link: {
 		addTargetToExternalLinks: true,
@@ -181,3 +183,4 @@ const editorConfig = {
 };
 
 ClassicEditor.create(document.querySelector('#editor'), editorConfig).then(e => { window.editor = e; });
+}

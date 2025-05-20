@@ -40,6 +40,7 @@ CREATE TABLE products (
 CREATE TABLE product_images (
    product_image_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
    product_id int,
+   product_image_name varchar(255),
    url varchar(255),
    order_image int,
   FOREIGN KEY (product_id) REFERENCES products(product_id)
