@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-  <html lang="vi">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết sản phẩm</title>
-    <link rel="stylesheet" href="public/css/style-collection.css">
-  </head>
-      <body>
-      <div class="main">
-          <header class="section-header">
-                  <div class="top-bar">
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chi tiết sản phẩm</title>
+        <link rel="stylesheet" href="public/css/style-collection.css">
+    </head>
+    <body>
+        <div class="main">
+            <header class="section-header">
+                <div class="top-bar">
                   <!-- Begin: Nav -->
-                      <ul class="main-nav">
-                          <li><a href="">CÓ GÌ MỚI</a></li>
-                          <li><a href="">DEALS</a></li>
-                          <li><a href="">THƯƠNG HIỆU</a></li>
-                          <li><a href="">SẢN PHẨM</a></li>
-                      </ul>
-                  </div>
-                  <div class="logo-container">
-                      <img src="/public/img/SWEELEE logo.png" alt="Logo">
-                  </div>
+                    <ul class="main-nav">
+                        <li><a href="">CÓ GÌ MỚI</a></li>
+                        <li><a href="">DEALS</a></li>
+                        <li><a href="">THƯƠNG HIỆU</a></li>
+                        <li><a href="">SẢN PHẨM</a></li>
+                    </ul>
+                </div>
+                <div class="logo-container">
+                    <img src="/public/img/SWEELEE logo.png" alt="Logo">
+                </div>
 
-                  <div class="user-actions">
-                      <a href="">Đăng nhập</a>
-
-                  </div>
+                <div class="user-actions">
+                    <a href="">Đăng nhập</a>
+                </div>
                   
           </header>
           <main class="main-content">
