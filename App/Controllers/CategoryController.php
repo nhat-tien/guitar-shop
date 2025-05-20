@@ -17,7 +17,7 @@ class CategoryController extends Controller {
         session_start();
 
         $categories = $this->categoryService->getAll();
-        $this->view("admin.category.index", ["categorys" => $categories]);
+        $this->view("admin.category.index", ["categories" => $categories]);
     }
 
     public function create()

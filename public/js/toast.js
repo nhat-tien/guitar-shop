@@ -2,7 +2,7 @@ function showToast(message, type = 'success') {
   const toast = document.createElement('div');
   toast.className = "new-toast";
   toast.innerHTML = `
-     <div class="new-toast__icon success">
+     <div class="new-toast__icon ${type}">
      </div>
       <div>${message}</div>
   `;

@@ -10,7 +10,7 @@
     <main>
         <?php require "App/Views/components/admin/sidemenu.php" ?>
         <div class="main-center">
-            <h2>Dáng đàn</h2>
+            <h2>Danh mục</h2>
             <div class="row row--to-right py-1">
                 <button id="btn-modal" class="btn">Thêm</button>
             </div>

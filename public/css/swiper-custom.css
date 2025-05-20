@@ -1,0 +1,40 @@
+
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.show-product-main-swiper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.show-product-main-swiper {
+    height: 300px;
+}
+
+.show-product-secondary-swiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.show-product-secondary-swiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.show-product-secondary-swiper {
+    height: 100px;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.show-product-secondary-swiper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

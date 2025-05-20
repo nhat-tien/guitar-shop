@@ -191,6 +191,7 @@ td {
     border: 1px solid #cacaca;
     border-radius: 5px;
     padding: 0.3em;
+    height: 2.1em;
 }
 
 .text-field__input:focus {
@@ -218,4 +219,40 @@ td {
     border-radius: 10px;
     width: 40%;
     padding: 0.7em;
+}
+
+.ck-powered-by {
+    display: none !important;
+}
+
+.editor-container {
+    margin: 1em 0;
+}
+
+.field {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.field__label {
+    font-size: 0.9rem;
+}
+
+.field__content {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.field__description {
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.show-slide {
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    padding: 1em;
 }
