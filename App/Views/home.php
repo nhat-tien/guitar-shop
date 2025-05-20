@@ -38,7 +38,6 @@
                         
                     </div>
                 </form>
-                
                 <div class="main-banner">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
@@ -86,13 +85,17 @@
                 <script>
                     const swiper = new Swiper(".mySwiper", {
                         loop: true,
+                        autoplay: {
+                            delay: 2000, 
+                            disableOnInteraction: false, 
+                        },
                         pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
+                            el: ".swiper-pagination",
+                            clickable: true,
                         },
                         navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
                         },
                     });
                 </script>

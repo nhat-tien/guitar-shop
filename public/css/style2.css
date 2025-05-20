@@ -101,7 +101,7 @@ html, body {
   transition: border-color 0.3s;
 }
 
-.search-box input[type="text"]:focus {
+.search-box input:focus {
   border-color: #666;
 }
 
