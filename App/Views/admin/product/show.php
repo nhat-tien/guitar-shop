@@ -46,7 +46,7 @@
                             </div>
                             <div class="field">
                                 <div class="field__label">Giá</div>
-                                <div class="field__content"><?= $product->base_price ?> <?= $product->price_unit ?></div>
+                                <div class="field__content"><?= $product->base_price ?> VND</div>
                             </div>
                             <div class="field">
                                 <div class="field__label">Số dây</div>

@@ -20,7 +20,6 @@ CREATE TABLE products (
    product_name varchar(255),
    quantity int,
    base_price int,
-   price_unit varchar(10),
    discount int,
    discount_unit varchar(10),
    number_of_string int,
@@ -65,12 +64,13 @@ CREATE TABLE customers (
 
 CREATE TABLE orders (
   order_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  customer_id varchar(255),
+  customer_id int,
   address varchar(255),
   created_at datetime DEFAULT CURRENT_TIMESTAMP,
   updated_at datetime DEFAULT CURRENT_TIMESTAMP,
   total int,
-  status varchar(255)
+  status varchar(255),
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
 
 CREATE TABLE order_detail (
@@ -79,7 +79,6 @@ CREATE TABLE order_detail (
   product_id int,
   product_quantity int,
   price int,
-  created_at datetime DEFAULT CURRENT_TIMESTAMP,
-  updated_at datetime DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (order_id) REFERENCES orders(order_id)
+  FOREIGN KEY (order_id) REFERENCES orders(order_id),
+  FOREIGN KEY (product_id) REFERENCES products(product_id)
 );

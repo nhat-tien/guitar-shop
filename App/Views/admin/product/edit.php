@@ -56,13 +56,6 @@
                             <input name="quantity" type="number" class="text-field__input" value="<?= $product->quantity ?>"/>
                         </div>
                         <div class="text-field">
-                            <label class="text-field__label">Đơn vị giá</label>
-                            <select name="price_unit" class="text-field__input">
-                                <option value="VND" <?= $product->price_unit == "VND" ? "selected" : "" ?>>₫ VND</option>
-                                <option value="USD" <?= $product->price_unit == "USD" ? "selected" : "" ?>>$ USD</option>
-                            </select>
-                        </div>
-                        <div class="text-field">
                             <label class="text-field__label">Đơn vị khuyến mãi</label>
                             <select name="discount_unit" class="text-field__input">
                                 <option value="%">%</option>
@@ -253,7 +246,7 @@
     </script>
     <script type="module">
         import { setupEditor } from "/public/js/editor.js"
-        setupEditor("<?= $product->description ?>");
+        setupEditor(<?= json_encode($product->description) ?>);
     </script>
 </body>
 
