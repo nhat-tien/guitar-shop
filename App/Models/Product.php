@@ -5,7 +5,6 @@ class Product {
   public $product_name; 
   public $quantity; 
   public $base_price; 
-  public $price_unit; 
   public $discount; 
   public $discount_unit; 
   public $number_of_string; 

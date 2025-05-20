@@ -121,7 +121,7 @@ html.collapse  .side-menu-item__label {
     border-radius: 10px;
 }
 
-table {
+.table {
     border-spacing: 0;
     width: max-content;
     min-width: 100%;
@@ -145,6 +145,10 @@ td {
     width: max-content;
     max-width: 1000px;
     border-bottom: 1px solid #cacaca;
+}
+
+.image-td img {
+    width: 100px;
 }
 
 .task-bar {

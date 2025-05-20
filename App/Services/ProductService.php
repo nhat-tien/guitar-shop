@@ -45,7 +45,6 @@ class ProductService {
                 $entity->product_name = $row['product_name'];
                 $entity->quantity = $row['quantity'];
                 $entity->base_price = $row['base_price'];
-                $entity->price_unit = $row['price_unit'];
                 $entity->discount = $row['discount'];
                 $entity->discount_unit = $row['discount_unit'];
                 $entity->number_of_string = $row['number_of_string'];
@@ -119,7 +118,6 @@ class ProductService {
         $entity->product_name = $model['product_name'];
         $entity->quantity = $model['quantity'];
         $entity->base_price = $model['base_price'];
-        $entity->price_unit = $model['price_unit'];
         $entity->discount = $model['discount'];
         $entity->discount_unit = $model['discount_unit'];
         $entity->number_of_string = $model['number_of_string'];
@@ -173,7 +171,6 @@ class ProductService {
             product_name,
             quantity,
             base_price,
-            price_unit,
             discount,
             discount_unit,
             number_of_string,
@@ -189,7 +186,6 @@ class ProductService {
             :product_name,
             :quantity,
             :base_price,
-            :price_unit,
             :discount,
             :discount_unit,
             :number_of_string,
@@ -205,7 +201,6 @@ class ProductService {
                 "product_name" => $product->product_name,
                 "quantity" => (int) $product->quantity,
                 "base_price" =>(int) $product->base_price,
-                "price_unit" => $product->price_unit,
                 "discount" => (int) $product->discount,
                 "discount_unit" => $product->discount_unit,
                 "number_of_string" =>(int) $product->number_of_string,
@@ -324,7 +319,6 @@ class ProductService {
             product_name = :product_name,
             quantity = :quantity,
             base_price = :base_price,
-            price_unit = :price_unit,
             discount = :discount,
             discount_unit = :discount_unit,
             number_of_string = :number_of_string,
@@ -343,7 +337,6 @@ class ProductService {
                 "product_name" => $product->product_name,
                 "quantity" => (int) $product->quantity,
                 "base_price" =>(int) $product->base_price,
-                "price_unit" => $product->price_unit,
                 "discount" => (int) $product->discount,
                 "discount_unit" => $product->discount_unit,
                 "number_of_string" =>(int) $product->number_of_string,
