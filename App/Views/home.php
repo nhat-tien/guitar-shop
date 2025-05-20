@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>Wee Lee Web</title>
         <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" href="public/js/" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body>
         <div id="main">
@@ -38,7 +40,7 @@
                 </div>
                 
                 <div class="main-banner">
-                    <img src="/public/img/Cat.jpg" alt="Cat">
+                    
                 </div>
                 <div class="sub-banners">
                     <img src="/public/img/Cat.jpg" alt="">
