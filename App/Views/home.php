@@ -336,54 +336,54 @@
 
             <section class="feature-section">
                 <h2 class="section-title">Swee Lee Là Cửa Hàng Âm Nhạc Hàng Đầu Đông Nam Á</h2>
-                <div class="feature-grid">
+                    <div class="feature-grid">
                     
-                    <!-- Box 1 -->
-                    <div class="feature-card" style="background-image: url('public/img/box/box1.jfif');">
-                    <div class="feature-content light-text">
-                        <h3>Mở Khoá Rewards Độc Quyền</h3>
-                        <p>Mua sắm và tích điểm để nhận đặc quyền cùng nhiều ưu đãi đặc biệt. Tạo ngay tài khoản và nhận miễn phí 100 điểm.</p>
-                        <a href="#">Tham Gia Ngay &gt;</a>
-                    </div>
-                    </div>
+                        <!-- Box 1 -->
+                        <div class="feature-card" style="background-image: url('public/img/box/box1.jfif');">
+                            <div class="feature-content light-text">
+                                <h3>Mở Khoá Rewards Độc Quyền</h3>
+                                <p>Mua sắm và tích điểm để nhận đặc quyền cùng nhiều ưu đãi đặc biệt. Tạo ngay tài khoản và nhận miễn phí 100 điểm.</p>
+                                <a href="#">Tham Gia Ngay &gt;</a>
+                            </div>
+                        </div>
 
-                    <!-- Box 2 -->
-                    <div class="feature-card" style="background-image: url('public/img/box/box2.jfif');">
-                    <div class="feature-content light-text">
-                        <h3>Giao Nhận Nhanh & Miễn Phí</h3>
-                        <p>Giao free gear mới về tận cửa trong vài ngày.</p>
-                        <a href="#">Mua Ngay &gt;</a>
-                    </div>
-                    </div>
+                        <!-- Box 2 -->
+                        <div class="feature-card" style="background-image: url('public/img/box/box2.jfif');">
+                            <div class="feature-content light-text">
+                                <h3>Giao Nhận Nhanh & Miễn Phí</h3>
+                                <p>Giao free gear mới về tận cửa trong vài ngày.</p>
+                                <a href="#">Mua Ngay &gt;</a>
+                            </div>
+                        </div>
 
-                    <!-- Box 3 -->
-                    <div class="feature-card" style="background-image: url('public/img/box/box3.jfif');">
-                    <div class="feature-content">
-                        <h3>Mua Ngày, Trả Sau</h3>
-                        <p>Mua sắm thoải mái và thanh toán theo kỳ hạn với AlePay.</p>
-                        <a href="#">Mua Sắm Ngay &gt;</a>
-                    </div>
-                    </div>
+                        <!-- Box 3 -->
+                        <div class="feature-card" style="background-image: url('public/img/box/box3.jfif');">
+                            <div class="feature-content">
+                                <h3>Mua Ngày, Trả Sau</h3>
+                                <p>Mua sắm thoải mái và thanh toán theo kỳ hạn với AlePay.</p>
+                                <a href="#">Mua Sắm Ngay &gt;</a>
+                            </div>
+                        </div>
 
-                    <!-- Box 4 -->
-                    <div class="feature-card" style="background-image: url('public/img/box/box4.jfif');">
-                    <div class="feature-content">
-                        <h3>14 Ngày Hoàn Hàng Dễ Dàng</h3>
-                        <p>Hoàn hàng và đổi sang store credit trong 14 ngày sau mua.</p>
-                        <a href="#">Đến Trung Tâm Trợ Giúp &gt;</a>
-                    </div>
-                    </div>
+                        <!-- Box 4 -->
+                        <div class="feature-card" style="background-image: url('public/img/box/box4.jfif');">
+                            <div class="feature-content">
+                                <h3>14 Ngày Hoàn Hàng Dễ Dàng</h3>
+                                <p>Hoàn hàng và đổi sang store credit trong 14 ngày sau mua.</p>
+                                <a href="#">Đến Trung Tâm Trợ Giúp &gt;</a>
+                            </div>
+                        </div>
 
-                    <!-- Box 5 -->
-                    <div class="feature-card" style="background-image: url('public/img/box/box5.jfif');">
-                    <div class="feature-content light-text">
-                        <h3>Hỗ trợ theo yêu cầu</h3>
-                        <p>Chat với đội ngũ chuyên gia để được trợ giúp.</p>
-                        <a href="#">Bắt Đầu Chat &gt;</a>
-                    </div>
-                    </div>
+                        <!-- Box 5 -->
+                        <div class="feature-card" style="background-image: url('public/img/box/box5.jfif');">
+                            <div class="feature-content light-text">
+                                <h3>Hỗ trợ theo yêu cầu</h3>
+                                <p>Chat với đội ngũ chuyên gia để được trợ giúp.</p>
+                                <a href="#">Bắt Đầu Chat &gt;</a>
+                            </div>
+                        </div>
 
-                </div>    
+                    </div>    
             </section>
             
             <div class="info-section">
@@ -424,6 +424,82 @@
                 </div>
             </div>
 
+            <footer class="footer">
+                <div class="footer-top">
+                    <div class="subscribe">
+                    <h4>ĐĂNG KÝ NHẬN THÔNG BÁO QUA MAIL</h4>
+                    <p>Đăng ký nhận thông tin Ưu đãi Tết từ Swee Lee!</p>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email address">
+                        <button>Đăng ký</button>
+                    </div>
+                    </div>
+
+                    <div class="footer-links">
+                    <div>
+                        <h5>Thương hiệu</h5>
+                        <ul>
+                            <li>Ibanez</li>
+                            <li>PRS</li>
+                            <li>Martin</li>
+                            <li>Marshall</li>
+                            <li>Heritage</li>
+                            <li>Fender</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Thể loại</h5>
+                        <ul>
+                            <li><a href="">Bán Chạy</a></li>
+                            <li><a href="">Special</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Dịch vụ khách hàng</h5>
+                        <ul>
+                            <li><a href="">Trung tâm trợ giúp</a></li>
+                            <li><a href="">Đặt hàng & Thanh toán</a></li>
+                            <li><a href="">Giao nhận</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Về</h5>
+                        <ul>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="">Điều khoản sử dụng</a></li>
+                            <li><a href="">Tuyển dụng</a></li>
+                            <li><a href="">Press</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Liên hệ</h5>
+                        <ul>
+                            <li><a href="">Tìm vị trí</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                            <li>
+                                <!-- <a href="#"><img src="public/img/footer/instagram.png" alt="Instagram"></a>
+                                <a href="#"><img src="public/img/footer/facebook.png" alt="Facebook"></a> -->
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="certificates">
+                        <img src="public/img/footer/secure1.png" alt="Secure">
+                        <img src="public/img/footer/shopify-secure.png" alt="Shopify">
+                        <img src="public/img/footer/verified.png" alt="Verified">
+                        </div>
+                    
+                    <div class="company-info">
+                        <p>© 2025, Công Ty TNHH Âm Nhạc Swee Lee.</p>
+                        <p>Địa chỉ: 44, Đường số 2, Khu Dân Cư Him Lam, P. Tân Hưng, Q.7, TP.HCM</p>
+                    </div>
+                </div>
+                </footer>   
+            
             </main>
 
         </div>

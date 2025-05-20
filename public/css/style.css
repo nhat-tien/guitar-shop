@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #f9f9f9;
 }
@@ -273,7 +273,7 @@ body {
 .product-card-status {
     font-size: 14px;
     color: green;
-    font-weight: 500;
+    font-weight: 500;   
     margin-top: 4px;
     display: block;
 }
@@ -287,7 +287,6 @@ body {
     width: 20px;
     height: 20px;
 }
-
 
 
 .special h2{
@@ -313,9 +312,6 @@ body {
     width: 300px;
     height: 500px;
 }
-
-
-
 
 
 .feature-section {
@@ -483,4 +479,108 @@ body {
 .brand-logos img {
     height: 40px;
     object-fit: contain;
+}
+
+
+
+.footer {
+  background: #1c1a17;
+  color: white;
+  padding: 40px 20px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.footer h4, .footer h5 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.subscribe {
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  flex: 1;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe-form button {
+  background: #c0a750;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+.footer-links h5 {
+    color: #9f8a46;
+}
+.footer-links h5 a:hover {
+    color: #000;
+}
+
+.footer-links div {
+  min-width: 150px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.language-flags img {
+  width: 24px;
+  margin: 10px 4px 0 0;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.certificates img,
+.payment-methods img {
+  height: 24px;
+  margin-right: 10px;
+}
+
+.company-info {
+  margin-top: 10px;
+  max-width: 100%;
 }
