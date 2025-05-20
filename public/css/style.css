@@ -769,3 +769,44 @@ html, body {
   margin-top: 10px;
   max-width: 100%;
 }
+
+
+
+.search-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+    background: #fff;
+    border-radius: 8px;
+    justify-content: flex-start;
+}
+
+.search-box input,
+.search-box select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 160px;
+}
+
+.search-box button {
+    background-color: #A48D3A;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background-color: #8c7830;
+}
+
+.icon-search {
+    margin-right: 6px;
+}

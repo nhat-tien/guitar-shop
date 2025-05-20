@@ -157,20 +157,91 @@ html, body {
 }
 
 .product-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 12px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: block;
+    width: 240px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .product-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: contain;
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: #f9f9f9;
+    margin-bottom: 12px;
+    border: 1px solid #eee;
 }
 
-.stock {
-  color: green;
-  font-size: 14px;
+.product-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0 4px;
 }
+
+.product-card p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #000;
+    margin-top: 8px;
+}
+
+.product-card .stock {
+    color: green;
+    font-size: 13px;
+}
+
+
+.search-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+    background: #fff;
+    border-radius: 8px;
+    justify-content: flex-start;
+}
+
+.search-box input,
+.search-box select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 160px;
+}
+
+.search-box button {
+    background-color: #A48D3A;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background-color: #8c7830;
+}
+
+.icon-search {
+    margin-right: 6px;
+}
+

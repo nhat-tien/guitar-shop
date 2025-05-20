@@ -36,6 +36,31 @@
                         <input type="text" placeholder="Tìm kiếm sản phẩm hoặc thương hiệu" name="" id="">
                         <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Lato, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
                         
+                        <select name="brand">
+                            <option value="">-- Hãng đàn --</option>
+                            <option value="yamaha">Yamaha</option>
+                            <option value="fender">Fender</option>
+                            <option value="ibanez">Ibanez</option>
+                            <option value="gretsch">Gretsch</option>
+                        </select>
+
+                        <select name="category">
+                            <option value="">-- Danh mục --</option>
+                            <option value="guitar-dien">Guitar Điện</option>
+                            <option value="guitar-acoustic">Guitar Acoustic</option>
+                            <option value="guitar-bass">Guitar Bass</option>
+                            <option value="phu-kien">Phụ kiện</option>
+                        </select>
+                        <select name="bodyshape">
+                            <option value="">-- Dáng đàn --</option>
+                            <option value="stratocaster">Stratocaster</option>
+                            <option value="telecaster">Telecaster</option>
+                            <option value="les-paul">Les Paul</option>
+                            <option value="hollow">Hollow Body</option>
+                            <option value="superstrat">Super Strat</option>
+                        </select>
+
+                        <button type="submit">Tìm</button>
                     </div>
                 </form>
                 <div class="main-banner">
