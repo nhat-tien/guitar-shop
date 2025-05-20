@@ -19,6 +19,7 @@ $router = new Router();
 *  -----------------
 */
 $router->get("/", HomeController::class, "index");
+$router->get("/product/{}", HomeController::class, "product");
 $router->get("/admin/register", AuthController::class, "registerAdminView");
 $router->post("/admin/register", AuthController::class, "registerUser");
 /* -----------------
