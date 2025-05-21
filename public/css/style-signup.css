@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.section-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-nav {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.main-nav li a:hover {
+    color: #9f8a46;
+}
+
+/* Logo giữa header */
+.logo-container {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.logo-container img {
+    max-width: 180px;
+    height: auto;
+}
+
+.user-actions {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+
+.user-actions a {   
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.user-actions a:hover {
+    color: #0056b3;
+}
+
+
+.main-content {
+    background-color: #fff;
+    display: block;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.search-box svg {
+    width: 20px;
+    height: 20px;
+    fill: #231E18;
+}
+
+.search-box input {
+    width: 100%;
+    height: 36px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #666;
+}
+
+.search-box a {
+    color: #5a2ea0;
+    text-decoration: underline;
+    font-size: 14px;
+}
+.search-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+    background: #fff;
+    border-radius: 8px;
+    justify-content: flex-start;
+}
+
+.search-box input,
+.search-box select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 160px;
+}
+
+.search-box button {
+    background-color: #A48D3A;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background-color: #8c7830;
+}
+
+.icon-search {
+    margin-right: 6px;
+}
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+  background-color: #fdfdfd;
+}
+
+.register-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.register-container .checkbox {
+    padding: 5px;
+}
+.register-container .checkbox p {
+    padding: 5px;
+}
+
+.register-form, .register-benefits {
+  background-color: white;
+  padding: 30px;
+  width: 400px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.register-form h2,
+.register-benefits h2 {
+  color: #9c8333;
+  margin-bottom: 10px;
+}
+
+.register-form p {
+  margin-bottom: 15px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  outline: none;
+}
+
+.btn-social {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.btn-social.google::before {
+  content: " ";
+}
+
+.btn-social.facebook::before {
+  content: " ";
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #888;
+}
+
+.checkbox {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  background-color: #9c8333;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.terms {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.terms a {
+  text-decoration: underline;
+  color: #000;
+}
+
+.register-benefits ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.register-benefits li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.btn-bandlab {
+  width: 100%;
+  background-color: #1d1d1b;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}

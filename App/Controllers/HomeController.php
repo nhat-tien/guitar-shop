@@ -11,7 +11,7 @@ class HomeController extends Controller {
     }
 
     public function index() {
-        $this->view("login"); 
+        $this->view("signup"); 
     }
 
     public function product($id) 
