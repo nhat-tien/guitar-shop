@@ -10,9 +10,8 @@ class HomeController extends Controller {
         $this->productService = new ProductService();
     }
 
-    public function index() 
-    {
-        $this->view("home");
+    public function index() {
+        $this->view("cart"); 
     }
 
     public function product($id) 
