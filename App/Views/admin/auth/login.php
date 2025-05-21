@@ -35,6 +35,7 @@
                 </div>
                 <button type="button" class="full-width-btn mt-2" onclick="handleSubmit()">Xác nhận
                 </button>
+                <a href="/admin/register" class="mt-1">Chưa có tài khoản, đăng kí</a>
             </form>
         </div>
     </main>

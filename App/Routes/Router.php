@@ -44,7 +44,7 @@ class Router
     public function dispatch($uri, $method)
     {
         if(!AuthGuard::checkAuth($uri)) {
-            header("location: /user/login");
+            header("location: /admin/login");
             exit();
         }
 

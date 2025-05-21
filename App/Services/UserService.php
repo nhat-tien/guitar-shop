@@ -84,7 +84,7 @@ class UserService {
             ->statement("UPDATE users SET
                 user_name = :user_name,
                 user_email = :user_email,
-                address = :address,
+                address = :address
                 WHERE user_id = :user_id
             ")
             ->params([
@@ -96,7 +96,7 @@ class UserService {
             ->execute()
             ->close();
         } else {
-            $password = hash("sha256", $user->password);
+            $password = password_hash($user->password, PASSWORD_DEFAULT);
 
             Db::builder()
             ->statement("UPDATE users SET
