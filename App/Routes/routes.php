@@ -19,6 +19,10 @@ $router = new Router();
 *  -----------------
 */
 $router->get("/", HomeController::class, "index");
+$router->get("/collection", HomeController::class, "collection");
+$router->get("/checkout", HomeController::class, "cart");
+
+
 $router->get("/product/{}", HomeController::class, "product");
 $router->get("/login", AuthController::class, "login");
 $router->get("/register", AuthController::class, "register");

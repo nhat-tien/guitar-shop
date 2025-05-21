@@ -11,6 +11,14 @@ class HomeController extends Controller {
     }
 
     public function index() {
+        $this->view("home"); 
+    }
+
+    public function collection() {
+        $this->view("collection"); 
+    }
+
+    public function cart() {
         $this->view("cart"); 
     }
 
