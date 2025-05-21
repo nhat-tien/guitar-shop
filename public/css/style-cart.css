@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.section-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-nav {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.main-nav li a:hover {
+    color: #9f8a46;
+}
+
+/* Logo giữa header */
+.logo-container {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.logo-container img {
+    max-width: 180px;
+    height: auto;
+}
+
+.user-actions {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+
+.user-actions a {   
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.user-actions a:hover {
+    color: #0056b3;
+}
+
+
+.main-content {
+    background-color: #fff;
+    display: block;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.search-box svg {
+    width: 20px;
+    height: 20px;
+    fill: #231E18;
+}
+
+.search-box input {
+    width: 100%;
+    height: 36px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #666;
+}
+
+.search-box a {
+    color: #5a2ea0;
+    text-decoration: underline;
+    font-size: 14px;
+}
+.search-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+    background: #fff;
+    border-radius: 8px;
+    justify-content: flex-start;
+}
+
+.search-box input,
+.search-box select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 160px;
+}
+
+.search-box button {
+    background-color: #A48D3A;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background-color: #8c7830;
+}
+
+.icon-search {
+    margin-right: 6px;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #fffdf5;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Container chia 2 cột */
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Cột trái chứa sản phẩm */
+.left {
+  flex: 2;
+  background-color: #f9f4e6;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Cột phải chứa thanh toán */
+.right {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Phần hình ảnh sản phẩm */
+.product-image {
+  width: 120px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Thông tin sản phẩm */
+.product-info h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.stock {
+  color: teal;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.price del {
+  color: red;
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.quantity {
+  margin: 10px 0;
+}
+
+/* Nút đặt hàng */
+.order-button {
+  background-color: #c5a100;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 15px 20px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delivery-info,
+.shipping-info {
+  margin: 10px 0;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #f3f3f3;
+  padding: 10px;
+}
+
+/* Ghi chú dưới cùng */
+.note {
+  font-size: 13px;
+  margin-top: 20px;
+  color: #444;
+}
+
+.note a {
+  color: #0044cc;
+  text-decoration: underline;
+}
+
+
+
+    
