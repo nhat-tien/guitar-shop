@@ -14,7 +14,6 @@ class CustomerController extends Controller {
 
     public function index()
     {
-        session_start();
         $customers = $this->customerService->getAll();
         $this->view("admin.customer.index", [ "customers" => $customers]);
     }
@@ -27,7 +26,6 @@ class CustomerController extends Controller {
 
     public function store()
     {
-        session_start();
 
         if(!isset($_POST["customer_name"]) || empty($_POST["customer_name"])) {
             $this->sendError("Thiếu tên");
@@ -84,7 +82,6 @@ class CustomerController extends Controller {
 
     public function update($id)
     {
-        session_start();
 
         if(!isset($_POST["customer_name"]) || empty($_POST["customer_name"])) {
             $this->sendError("Thiếu tên");
@@ -132,7 +129,6 @@ class CustomerController extends Controller {
 
     public function destroy($id)
     {
-        session_start();
         $res = $this->customerService->delete($id);
         $_SESSION['response'] = [ 
             "status" => $res['status'],

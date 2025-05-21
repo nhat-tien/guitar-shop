@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi tiết sản phẩm</title>
-    <link rel="stylesheet" href="public/css/style2.css">
+    <link rel="stylesheet" href="/public/css/style2.css">
   </head>
       <body>
       <div class="main">
@@ -46,36 +46,19 @@
                         <img src="public/img/Product/thumb2.jpg" alt="">
                         <img src="public/img/Product/thumb3.jpg" alt="">
                         <img src="public/img/Product/thumb4.jpg" alt="">
-                        
                       </div>
                     </div>
                     <div class="product-info">
                       <h2 class="product-title">
-                        Fender 70th Anniversary Player Stratocaster Electric Guitar, RW FB, Nebula Noir
+                        <?= $product->product_name ?>
                       </h2>
-                      <p class="product-price">29.040.000₫</p>
+                      <p class="product-price"><?= number_format($product->base_price, 0, '', '.') ?> ₫</p>
+                      </h2>
                       <p class="product-installment">hoặc <strong>7.260.000₫</strong> hàng tháng</p>
                       <button class="add-to-cart">🛒 Thêm vào giỏ hàng</button>
                       <div class="product-description">
                         <h3>Về Sản Phẩm</h3>
-                        <p>
-                          Ra mắt bộ sưu tập 70th Anniversary Stratocaster®: kỷ niệm 7 thập niên chất âm vượt thời 
-                          gian và phong cách đậm tính biểu tượng. Mỗi model 70th Anniversary Stratocaster thể hiện 
-                          rõ nét di sản phong phú và tone tiếng huyền thoại - những yếu tố đã biến Strat® thành tượng 
-                          đài không đối thủ. Từ purist yêu cổ điển đến player có lối chơi bạo dạn hung hãn muốn sở hữu 
-                          một cây guitar có tính năng hiện đại, chắc chắn trên đời có một model guitar đáp ứng khao khát 
-                          của bạn. Hãy đắm mình trong di sản của Stratocaster và sở hữu một phần lịch sử Fender® với 70th 
-                          Anniversary Stratocaster Collection. Nhạc cụ thuộc 70th Anniversary Stratocaster Collection được 
-                          ra mắt với số lượng có hạn,  vì vậy hãy sở hữu ngay một cây 70th Anniversary Stratocaster cho mình 
-                          trước khi hết cơ hội.Trải nghiệm phong cách Fender đích thực và hiệu suất hiện đại với 70th 
-                          Anniversary Player Stratocaster. Khoác lên mình màu Nebular Noir rực rỡ và chói lọi, cây Strat
-                          này đẹp đến kinh ngạc, đủ linh hoạt để chơi mọi dòng nhạc và hoàn hảo để tạo ra tiếng đàn của 
-                          riêng bạn. Cần maple dáng Modern “C” với mặt cần rosewood cong 9.5” mang đến cảm giác Fender chân 
-                          thực, các pickup Pure Vintage '59 Single-Coil Strat® thu truyền tone tiếng đẹp, articulation nét, 
-                          phù hợp để chơi nhiều dòng nhạc khác nhau. Ngựa nhún 2 chiều và bộ khoá ClassicGear™ đảm bảo đàn 
-                          luôn chơi đúng tông, để bạn tự do tha hồ khám phá nhiều âm sắc vô hạn. 70th Anniversary Player 
-                          Stratocaster là một cây Strat linh hoạt, truyền cảm hứng để bạn chơi nhạc đậm chất riêng.
-                        </p>
+                        <p><?= $product->description ?></p>
                       </div>
                     </div>
                   </div>

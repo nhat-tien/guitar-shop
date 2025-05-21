@@ -14,7 +14,6 @@ class CategoryController extends Controller {
 
     public function index()
     {
-        session_start();
 
         $categories = $this->categoryService->getAll();
         $this->view("admin.category.index", ["categories" => $categories]);
@@ -27,7 +26,6 @@ class CategoryController extends Controller {
 
     public function store()
     {
-        session_start();
         $name = $_POST["category_name"];
         $res = $this->categoryService->insert($name);
         $_SESSION['response'] = [ 
@@ -50,7 +48,6 @@ class CategoryController extends Controller {
 
     public function update($id)
     {
-        session_start();
         $name = $_POST['category_name'];
         $category = new Category();
         $category->category_name = $name;
@@ -66,7 +63,6 @@ class CategoryController extends Controller {
 
     public function destroy($id)
     {
-        session_start();
         $res = $this->categoryService->delete($id);
         $_SESSION['response'] = [ 
             "status" => $res['status'],
