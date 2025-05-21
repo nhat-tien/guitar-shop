@@ -1,8 +1,39 @@
 <?php
 
-require_once("App/Db/Db.php");
+require_once "App/Db/Db.php";
+require_once "App/Models/User.php";
 
 class AuthService {
+
+    public function loginAdmin(
+        $email,
+        $password
+    )
+    {
+        $db = new Db();
+
+        $statement = $db->statement("SELECT * FROM users WHERE user_email = :email")
+        ->params([ 
+            "email" => $email,
+        ])
+        ->className("User")
+        ->query();
+
+        $user = $statement->fetch();
+
+        $db->close();
+
+        if(empty($user)) {
+            return null;
+        }
+
+        if(!password_verify($password, $user->password))
+        {
+            return null;
+        }
+
+        return $user;
+    }
 
     public function registerUser(
         $name,

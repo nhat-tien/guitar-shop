@@ -8,7 +8,11 @@ class OrderService {
     {
         $db = new Db();
         $statemnt = $db
-        ->statement("SELECT * FROM orders")
+        ->statement("SELECT * 
+        FROM orders o
+        JOIN customers c
+        ON o.customer_id = c.customer_id
+        ")
         ->className("Order")
         ->query();
 
@@ -28,6 +32,8 @@ class OrderService {
         FROM orders o
         JOIN order_detail od
         ON o.order_id = od.order_id
+        JOIN customers c
+        ON o.customer_id = c.customer_id
         WHERE p.order_id = :order_id")
         ->className("Order")
         ->params([
@@ -40,6 +46,7 @@ class OrderService {
 
         $entity->order_id = $model['order_id'];
         $entity->customer_id = $model['customer_id'];
+        $entity->customer_name = $model['customer_name'];
         $entity->address = $model['address'];
         $entity->created_at = $model['created_at'];
         $entity->updated_at = $model['updated_at'];

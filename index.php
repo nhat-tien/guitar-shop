@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $uri = $_SERVER["REQUEST_URI"];
 $method = $_SERVER['REQUEST_METHOD'];
 

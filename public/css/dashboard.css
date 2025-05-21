@@ -219,6 +219,7 @@ td {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    width: 100%;
 }
 
 .text-field__label {
@@ -376,4 +377,38 @@ td {
     top: 120%;
     left: -150%;
     z-index: 10;
+}
+
+.login-form {
+    padding: 3em;
+    background-color: #fff;
+    border: 0.8px solid #cacaca;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+
+.login-form img {
+    width: 200px;
+}
+
+.login-form h2 {
+    margin: 1em 0 0.3em 0;
+    color: #857a53;
+    font-weight: 800;
+}
+
+.full-width-btn {
+    padding: 0.5em;
+    background-color: #857a53;
+    width: 100%;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.full-width-btn:hover {
+    background-color: #5e563c;
 }

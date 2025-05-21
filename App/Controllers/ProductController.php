@@ -16,7 +16,6 @@ class ProductController extends Controller {
 
     public function index()
     {
-        session_start();
         $products = $this->productService->getAll();
         $this->view("admin.product.index", ["products" => $products]);
     }
@@ -42,7 +41,6 @@ class ProductController extends Controller {
 
     public function store()
     {
-        session_start();
         $product = new Product();
         if(!isset($_POST["product_name"]) || empty($_POST["product_name"])) {
             $this->sendError("Thiếu tên sản phẩm");
@@ -151,7 +149,6 @@ class ProductController extends Controller {
 
     public function update($id)
     {
-        session_start();
         $product = new Product();
         $product->product_id = $id;
         if(!isset($_POST["product_name"]) || empty($_POST["product_name"])) {
@@ -231,7 +228,6 @@ class ProductController extends Controller {
 
     public function destroy($id)
     {
-        session_start();
         $res = $this->productService->delete($id);
         $_SESSION['response'] = [ 
             "status" => $res['status'],

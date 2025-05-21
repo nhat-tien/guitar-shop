@@ -36,7 +36,7 @@ class UserService {
 
     public function insert($user)
     {
-        $password = hash("sha256", $user->password);
+        $password = password_hash($user->password, PASSWORD_DEFAULT);
 
         Db::builder()
         ->statement("INSERT INTO users (

@@ -1,4 +1,6 @@
 <?php
+require_once "App/Middleware/AuthGuard.php";
+
 class Router
 {
 
@@ -41,6 +43,11 @@ class Router
 
     public function dispatch($uri, $method)
     {
+        if(!AuthGuard::checkAuth($uri)) {
+            header("location: /user/login");
+            exit();
+        }
+
         $result = $this->extractIdFromUri($uri);
         $path = $result[0];
         $num = $result[1];

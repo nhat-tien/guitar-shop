@@ -9,4 +9,7 @@ class Order {
   public $total;
   public $status;
   public $order_detail;
+
+  public $customer_name;
+
 }
