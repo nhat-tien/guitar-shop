@@ -31,8 +31,10 @@ $router->post("/signup", AuthController::class, "register");
 */
 $router->get("/admin/login", AdminController::class, "login");
 $router->get("/admin/register", AdminController::class, "register");
+$router->get("/admin/logout", AdminController::class, "logout");
 $router->post("/admin/signin", AdminController::class, "signin");
 $router->post("/admin/signup", AdminController::class, "signup");
+$router->get("/admin/account", AdminController::class, "account");
 
 $router->get("/admin", AdminController::class, "admin");
 $router->get("/admin/dashboard", AdminController::class, "dashboard");
