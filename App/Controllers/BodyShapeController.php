@@ -14,7 +14,6 @@ class BodyShapeController extends Controller {
 
     public function index()
     {
-        session_start();
 
         $body_shapes = $this->bodyShapeService->getAll();
         $this->view("admin.bodyShape.index", ["body_shapes" => $body_shapes]);
@@ -27,7 +26,6 @@ class BodyShapeController extends Controller {
 
     public function store()
     {
-        session_start();
         $name = $_POST["body_shape_name"];
         $res = $this->bodyShapeService->insert($name);
         $_SESSION['response'] = [ 
@@ -50,7 +48,6 @@ class BodyShapeController extends Controller {
 
     public function update($id)
     {
-        session_start();
         $name = $_POST['body_shape_name'];
         $body_shape = new BodyShape();
         $body_shape->body_shape_name = $name;
@@ -66,7 +63,6 @@ class BodyShapeController extends Controller {
 
     public function destroy($id)
     {
-        session_start();
         $res = $this->bodyShapeService->delete($id);
         $_SESSION['response'] = [ 
             "status" => $res['status'],

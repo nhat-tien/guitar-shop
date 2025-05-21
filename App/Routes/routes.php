@@ -1,16 +1,16 @@
 <?php
 
 require_once "Router.php";
-require_once "App/Controllers/HomeController.php";
 require_once "App/Controllers/AuthController.php";
-require_once "App/Controllers/ProductController.php";
 require_once "App/Controllers/AdminController.php";
 require_once "App/Controllers/BrandController.php";
 require_once "App/Controllers/BodyShapeController.php";
 require_once "App/Controllers/CategoryController.php";
 require_once "App/Controllers/CustomerController.php";
-require_once "App/Controllers/UserController.php";
+require_once "App/Controllers/HomeController.php";
 require_once "App/Controllers/OrderController.php";
+require_once "App/Controllers/ProductController.php";
+require_once "App/Controllers/UserController.php";
 
 $router = new Router();
 
@@ -20,12 +20,21 @@ $router = new Router();
 */
 $router->get("/", HomeController::class, "index");
 $router->get("/product/{}", HomeController::class, "product");
-$router->get("/admin/register", AuthController::class, "registerAdminView");
-$router->post("/admin/register", AuthController::class, "registerUser");
+$router->get("/login", AuthController::class, "login");
+$router->get("/register", AuthController::class, "register");
+$router->post("/signin", AuthController::class, "login");
+$router->post("/signup", AuthController::class, "register");
+
 /* -----------------
 *  |   Admin 
 *  -----------------
 */
+$router->get("/admin/login", AdminController::class, "login");
+$router->get("/admin/register", AdminController::class, "register");
+$router->post("/admin/signin", AdminController::class, "signin");
+$router->post("/admin/signup", AdminController::class, "signup");
+
+$router->get("/admin", AdminController::class, "admin");
 $router->get("/admin/dashboard", AdminController::class, "dashboard");
 
 /* -----------------

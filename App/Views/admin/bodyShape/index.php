@@ -15,7 +15,7 @@
             <div class="row row--to-right py-1">
                 <button id="btn-modal" class="btn">Thêm</button>
             </div>
-            <div class="container">
+            <div class="container mb-10">
                 <div class="row row--to-left task-bar">
                 </div>
                 <table class="table">

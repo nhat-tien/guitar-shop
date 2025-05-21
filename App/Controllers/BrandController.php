@@ -14,8 +14,6 @@ class BrandController extends Controller {
 
     public function index()
     {
-        session_start();
-
         $brands = $this->brandsService->getAll();
         $this->view("admin.brand.index", ["brands" => $brands]);
     }
@@ -27,7 +25,6 @@ class BrandController extends Controller {
 
     public function store()
     {
-        session_start();
         $name = $_POST["brand_name"];
         $res = $this->brandsService->insert($name);
         $_SESSION['response'] = [ 
@@ -50,7 +47,6 @@ class BrandController extends Controller {
 
     public function update($id)
     {
-        session_start();
         $name = $_POST['brand_name'];
         $brand = new Brand();
         $brand->brand_name = $name;
@@ -66,7 +62,6 @@ class BrandController extends Controller {
 
     public function destroy($id)
     {
-        session_start();
         $res = $this->brandsService->delete($id);
         $_SESSION['response'] = [ 
             "status" => $res['status'],

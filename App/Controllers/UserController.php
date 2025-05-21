@@ -14,7 +14,6 @@ class UserController extends Controller {
 
     public function index()
     {
-        session_start();
         $users = $this->userService->getAll();
         $this->view("admin.user.index", [ "users" => $users]);
     }
@@ -27,7 +26,6 @@ class UserController extends Controller {
 
     public function store()
     {
-        session_start();
 
         if(!isset($_POST["user_name"]) || empty($_POST["user_name"])) {
             $this->sendError("Thiếu tên");
@@ -84,7 +82,6 @@ class UserController extends Controller {
 
     public function update($id)
     {
-        session_start();
 
         if(!isset($_POST["user_name"]) || empty($_POST["user_name"])) {
             $this->sendError("Thiếu tên");
@@ -132,7 +129,6 @@ class UserController extends Controller {
 
     public function destroy($id)
     {
-        session_start();
         $res = $this->userService->delete($id);
         $_SESSION['response'] = [ 
             "status" => $res['status'],

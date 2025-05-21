@@ -20,7 +20,7 @@
                     </ul>
                 </div>
                 <div class="logo-container">
-                    <img src="/public/img/SWEELEE logo.png" alt="Logo">
+                    <img src="/public/img/logo.png" alt="Logo">
                 </div>
 
                 <div class="user-actions">

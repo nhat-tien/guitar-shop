@@ -10,7 +10,7 @@
         <?php require "App/Views/components/admin/sidemenu.php" ?>
         <div class="main-center">
             <h2>Khách hàng</h2>
-            <div class="container mt-2">
+            <div class="container mt-2 mb-10">
                 <div class="row row--to-left task-bar">
                 </div>
                 <table class="table">
