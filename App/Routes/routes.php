@@ -26,8 +26,9 @@ $router->get("/checkout", HomeController::class, "cart");
 $router->get("/product/{}", HomeController::class, "product");
 $router->get("/login", AuthController::class, "login");
 $router->get("/register", AuthController::class, "register");
-$router->post("/signin", AuthController::class, "login");
-$router->post("/signup", AuthController::class, "register");
+$router->post("/signin", AuthController::class, "signin");
+$router->post("/signup", AuthController::class, "signup");
+$router->get("/logout", AuthController::class, "logout");
 
 /* -----------------
 *  |   Admin 
@@ -109,5 +110,6 @@ $router->delete("/admin/customers/{}", CustomerController::class, "destroy");
 $router->get("/admin/orders", OrderController::class, "index");
 $router->get("/admin/orders/{}/show", OrderController::class, "show");
 $router->get("/admin/orders/{}/edit", OrderController::class, "edit");
+$router->post("/orders", OrderController::class, "store");
 $router->post("/admin/orders/{}", OrderController::class, "update");
 $router->delete("/admin/orders/{}", OrderController::class, "destroy");

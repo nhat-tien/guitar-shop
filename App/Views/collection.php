@@ -8,25 +8,7 @@
     </head>
     <body>
         <div class="main">
-            <header class="section-header">
-                <div class="top-bar">
-                  <!-- Begin: Nav -->
-                    <ul class="main-nav">
-                        <li><a href="">CÓ GÌ MỚI</a></li>
-                        <li><a href="">DEALS</a></li>
-                        <li><a href="">THƯƠNG HIỆU</a></li>
-                        <li><a href="">SẢN PHẨM</a></li>
-                    </ul>
-                </div>
-                <div class="logo-container">
-                    <img src="/public/img/SWEELEE logo.png" alt="Logo">
-                </div>
-
-                <div class="user-actions">
-                    <a href="">Đăng nhập</a>
-                </div>
-                  
-          </header>
+        <?php include "App/Views/components/header.php" ?>
           <main class="main-content">
                 <form action="/collection">
                     <div class="search-box">
@@ -90,23 +72,16 @@
 
                     <!-- Danh sách sản phẩm -->
                     <section class="product-list">
-                        <a href="/san-pham/gretsch-fsr-g5228g" class="product-card">
-                            <img src="path-to-image.jpg" alt="Gretsch FSR G5228G">
-                            <h3>Gretsch FSR G5228G</h3>
-                            <p>Electromatic Double Jet BT Electric Guitar, Imperial Stain</p>
-                            <p class="price">16.280.000₫</p>
-                            <p class="stock">Còn hàng</p>
-                        </a>
-
-                        <a href="/san-pham/gretsch-fsr-g5427tg" class="product-card">
-                            <img src="path-to-image.jpg" alt="Gretsch FSR G5427TG">
-                            <h3>Gretsch FSR G5427TG</h3>
-                            <p>Electromatic Hollow Body, Black Pearl</p>
-                            <p class="price">27.720.000₫</p>
-                            <p class="stock">Còn hàng</p>
-                        </a>
-
                         <!-- Thêm sản phẩm khác -->
+                         <?php foreach($products as $product): ?>
+                            <a href="/product/<?= $product->product_id ?>" class="product-card">
+                                <img src="<?= $product->images[0]->url ?>" alt="Gretsch FSR G5427TG">
+                                <h3><?= $product->product_name ?></h3>
+                                <p><?= $product->category_name ?></p>
+                                <p class="price"><?= number_format($product->base_price, 0,'','.')?>₫</p>
+                                <p class="stock"><?= $product->quantity > 0 ? "Còn hàng" : "Hết hàng" ?></p>
+                            </a>
+                        <?php endforeach; ?>
                     </section>
                 </div>    
           </main>

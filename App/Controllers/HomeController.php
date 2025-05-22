@@ -15,7 +15,8 @@ class HomeController extends Controller {
     }
 
     public function collection() {
-        $this->view("collection"); 
+        $products = $this->productService->getAll();
+        $this->view("collection", ["products" => $products]); 
     }
 
     public function cart() {

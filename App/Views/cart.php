@@ -4,30 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Chi tiết sản phẩm</title>
+        <link rel="stylesheet" href="/public/css/main.css">
         <link rel="stylesheet" href="/public/css/style-cart.css">
+        <style>
+            body {
+                overflow: auto;
+            }
+        </style>
     </head>
     <body>
         <div class="main">
-            <header class="section-header">
-                <div class="top-bar">
-                  <!-- Begin: Nav -->
-                    <ul class="main-nav">
-                        <li><a href="">CÓ GÌ MỚI</a></li>
-                        <li><a href="">DEALS</a></li>
-                        <li><a href="">THƯƠNG HIỆU</a></li>
-                        <li><a href="">SẢN PHẨM</a></li>
-                    </ul>
-                </div>
-                <div class="logo-container">
-                    <img src="/public/img/SWEELEE logo.png" alt="Logo">
-                </div>
-
-                <div class="user-actions">
-                    <a href="">Đăng nhập</a>
-                </div>
-                  
-          </header>
-          <main class="main-content">
+        <?php include "App/Views/components/header.php" ?>
+          <main style="margin-bottom: 100px" class="main-content">
                 
                 <form action="/search">
                     <div class="search-box">
@@ -69,23 +57,13 @@
                 <h1>Giỏ Hàng</h1>
 
                     <div class="container">
-                    <div class="left">
-                        <img src="pedalboard.png" class="product-image" alt="Pedalboard">
-                        <div class="product-info">
-                        <h2>Pedaltrain Terra 42 with Tour Case Pedalboard (B-Stock)</h2>
-                        <p class="stock">Có hàng</p>
-                        <a href=""><p class="price">12.150.000₫ <del>14.300.000₫</del></p></a>
-                        <div class="quantity">
-                            Số lượng:
-                            <input type="number" value="1" min="1" />
-                        </div>
-                        </div>
+                    <div id="cart-cnt" class="left">
                     </div>
 
                     <div class="right">
                         <div class="shipping-info">Chi phí vận chuyển: <span style="color: teal;">Miễn phí</span></div>
                         <div class="delivery-info">Thời gian giao: 3-5 ngày</div>
-                        <button class="order-button">Đặt hàng - 12.150.000₫</button>
+                        <button id="btn-send" class="order-button"></button>
                         <p style="text-align: center; font-size: 13px;">(Đã bao gồm thuế)</p>
                         <div class="note">
                             Bằng việc tiến hành kiểm tra, bạn đã đồng ý với
@@ -96,6 +74,71 @@
                     
           </main>
       </div>
+    <div id="toast-container"></div>
+    <script src="/public/js/toast.js"></script>
+      <script>
+        let btn = document.getElementById("btn-send");
+
+        if(localStorage.getItem("cart") != undefined) {
+            let cnt = document.getElementById("cart-cnt");
+            let cart = JSON.parse(localStorage.getItem("cart"));
+            let str = ``;
+            let total = 0;
+            cart.forEach(e => {
+                str += `
+                        <img src="${e.url}" class="product-image" alt="Pedalboard">
+                        <div class="product-info">
+                        <h2>${e.product_name}</h2>
+                        <p class="stock">Có hàng</p>
+                        <a href=""><p class="price">${numberWithCommas(e.price)}₫</p></a>
+                        <div class="quantity">
+                            Số lượng:
+                            <input type="number" value="1" min="1" />
+                        </div>
+                        <button onclick="deleteCart('${e.product_id}')">Xóa</button>
+                        </div>
+                `;
+                total += e.price;
+            });
+            cnt.innerHTML = str;
+            btn.innerText = `Đặt hàng - ${numberWithCommas(total)}₫`
+        }
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        function deleteCart(id) {
+            if(localStorage.getItem("cart") != undefined) {
+                let cart = JSON.parse(localStorage.getItem("cart"));
+                cart = cart.filter(e => e["product_id"] != id)
+                localStorage.setItem("cart", JSON.stringify(cart));
+                location.reload();
+            }
+        }
+
+        btn.addEventListener("click", () => {
+            if(localStorage.getItem("cart") != undefined) {
+                let formData = new FormData();
+                formData.append("cart", localStorage.getItem("cart"));
+                fetch("/stores", {
+                    method: "POST",
+                    body: formData
+                }).then(e => e.json())
+                .then(e => {
+                    if(e.status) {
+                        window.location.href = "/admin/products";
+                        showToast(`Đặt thành công`)
+                    } else {
+                        console.log(e.message)
+                        showToast(`Có lỗi xảy ra: ${e.message}`, "error")
+                    }
+                });
+            }
+        });
+
+
+      </script>
     </body>
   
 </html>

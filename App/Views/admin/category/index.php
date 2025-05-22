@@ -126,7 +126,7 @@
                 const id = e.currentTarget.getAttribute("data-id");
                 const name = e.currentTarget.getAttribute("data-name");
                 const parent = document.getElementById("update-form");
-                parent.setAttribute("action", "/admin/body-shapes/" + id);
+                parent.setAttribute("action", "/admin/categories/" + id);
                 parent.querySelector("input[name='category_name']").value = name;
                 openMenu('modal-container-update', 'modal-backdrop-update')
             }

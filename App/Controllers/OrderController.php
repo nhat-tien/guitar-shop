@@ -25,6 +25,10 @@ class OrderController extends Controller {
 
     public function store()
     {
+        if(!isset($_POST["cart"]) || empty($_POST["cart"])) {
+            $this->sendError("Không nhận được đơn hàng");
+        }
+        $cart = json_decode($_POST["cart"], true);
     }
 
     public function show($id)

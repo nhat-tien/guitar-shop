@@ -9,23 +9,7 @@
     </head>
     <body>
         <div id="main">
-            <header class="section-header">
-                <div class="top-bar">
-                <!-- Begin: Nav -->
-                    <ul class="main-nav">
-                        <li><a href="/collection">SẢN PHẨM</a></li>
-                    </ul>
-                </div>
-                <div class="logo-container">
-                    <img src="/public/img/logo.png" alt="Logo">
-                </div>
-
-                <div class="user-actions">
-                    <a href="">Đăng nhập</a>
-
-                </div>
-                
-            </header>
+            <?php include "App/Views/components/header.php" ?>
             <main class="main-content">
                 <div class="main-banner">
                     <div class="swiper mySwiper">

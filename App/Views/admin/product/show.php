@@ -46,7 +46,7 @@
                             </div>
                             <div class="field">
                                 <div class="field__label">Giá</div>
-                                <div class="field__content"><?= $product->base_price ?> VND</div>
+                                <div class="field__content"><?= number_format($product->base_price,0,'','.')?> VND</div>
                             </div>
                             <div class="field">
                                 <div class="field__label">Số dây</div>

@@ -36,7 +36,7 @@ class CustomerService {
 
     public function insert($customer)
     {
-        $password = hash("sha256", $customer->password);
+        $password = password_hash($customer->password, PASSWORD_DEFAULT);
 
         Db::builder()
         ->statement("INSERT INTO customers (
